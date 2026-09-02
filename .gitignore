@@ -1,0 +1,6 @@
+# Never commit local-only sponsor context
+/private/
+/dist/
+*.docx
+.env
+.env.*
