@@ -5,7 +5,7 @@
 | Party | Role in this Blueprint | Status |
 |-------|------------------------|--------|
 | **WorldTech IT** | Leading contributing partner / delivery through publish | Current |
-| **Red Hat** | OPI member — RHEL reference host; OpenShift Virt / OVN-K (Phase 1b — intended) | Current (platform) |
+| **Red Hat** | OPI member — OpenShift Virt / OVN-K (Phase 1b showcase); optional RHEL host port | Current (platform) |
 | **NVIDIA** | BlueField-3 + public DOCA / DPF — **in testing now** | Current **supported reference** (not an OPI membership claim) |
 | **Intel** (IPU) | Targeted port of same KVM + offloaded-OVS pattern | **Targeted / later** |
 | **Marvell** (Octeon) | Targeted port of same KVM + offloaded-OVS pattern | **Targeted / later** |

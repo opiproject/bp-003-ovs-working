@@ -25,12 +25,12 @@ Track 2 second vendor · DPU Operator↔DPF parity as a gate · VyOS/VNF day-2 �
 
 ## Phases
 
-### Phase 1a — RHEL / KVM
+### Phase 1a — KVM (Ubuntu/Debian lab)
 
-BF3 + OVS-DOCA; guests via vDPA (stock virtio-net); prove hardware offload; baseline pps/throughput; docs+IaC for 1a. **Live migration deferred** this cycle (single BF3).  
+BF3 + OVS-DOCA; guests via **DPDK HW vDPA + vhost-user** (stock virtio-net); prove hardware offload; baseline pps/throughput; docs+IaC for 1a. **Live migration deferred** this cycle (single BF3).  
 **Gate A:** independently reproducible from public repo.
 
-### Phase 1b — OpenShift Virtualization
+### Phase 1b — OpenShift Virtualization (**OPI showcase**)
 
 DPF + accelerated OVN-Kubernetes; KubeVirt VMs on offloaded fabric; adapt proof/harness; docs+IaC deltas.  
 **Gate B:** v1 complete per S2 (1a-only / 1a+1b required / 1a+1b best-effort).

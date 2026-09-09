@@ -3,25 +3,25 @@
 Derived from [`CHARTER.md`](CHARTER.md). Gates are **project** gates (TSC / showcase), not intern HR milestones.
 
 **Status:** Stage *Build & Document*. Sponsor decisions frozen.  
-**External milestone:** **OPI Summit — 15 October 2026** — lightning talk + blueprint outline / talkable progress.  
-Talk outline: [`OPI_Summit_2026_Lightning_Talk.md`](OPI_Summit_2026_Lightning_Talk.md)
+**External milestone:** **OPI Summit — 15 October 2026** — blueprint outline / talkable technical progress (Gate A').  
+Sponsor talk delivery is **out of this public repo** (Josh / WTIT owns slides & script; private).
 
 ---
 
 ## Sequencing (locked intent)
 
 ```
-Orient → Phase 1a (KVM/RHEL) → Gate A' (Summit-ready) → Phase 1b (OpenShift Virt) → Gate B → Publish
+Orient → Phase 1a (KVM / Ubuntu·Debian) → Gate A' (Summit-ready) → Phase 1b (OpenShift Virt showcase) → Gate B → Publish
                 ↑________________ Track 2 / extra vendors parked (see NON_GOALS / partners)
 ```
 
 | Phase | Intent | Continue when | Kill / defer when |
 |-------|--------|---------------|-------------------|
-| **Orient** (≤~2 wk) | Decisions frozen; OPI Lab access; RHEL minor from lab image | Lab + DOCA path real | No HW/entitlements → Summit = outline-only honesty |
-| **1a** | BF3 + OVS-DOCA + vDPA; offload proof; perf; **LM deferred** (no 2nd BF3) | Evidence + guide draft | Wrong offload path → stop, reset |
-| **Gate A' — Summit** | Outline + architecture + BOM stub + offload story (+ live or recorded proof if ready) | Talk track ready mid-Oct | Don’t fake LM or multi-vendor claims |
+| **Orient** (≤~2 wk) | Decisions frozen; OPI Lab access; host OS pin from lab | Lab + DOCA path real | No HW/entitlements → Summit = outline-only honesty |
+| **1a** | BF3 + OVS-DOCA + DPDK HW vDPA; offload proof; perf; **LM deferred** | Evidence + guide draft | Wrong offload path → stop, reset |
+| **Gate A' — Summit** | Outline + architecture + BOM + path-forward evidence | Talk track ready mid-Oct | Don’t fake LM or multi-vendor claims |
 | **Gate A** | 1a six deliverables PR-ready (LM = documented limitation) | → 1b | Demo-only → no full “published” claim |
-| **1b** | DPF + accel OVN-K + KubeVirt — **should happen** | E2E **or** gaps documented | Blocked → keep best-effort narrative |
+| **1b** | DPF + accel OVN-K + KubeVirt — **OPI showcase**; should happen | E2E **or** gaps documented | Blocked → keep best-effort narrative |
 | **Gate B** | Registry publish bar (S2=C) | OPI/TSC maintenance path named | — |
 | **v2** | Intel / Marvell / other lab cards | Separate reopen | Never sneak into v1 as “done” |
 
@@ -31,16 +31,16 @@ Orient → Phase 1a (KVM/RHEL) → Gate A' (Summit-ready) → Phase 1b (OpenShif
 
 ### Gate A' — Blueprint outline milestone (mid-Oct window)
 
-Useful as an in-repo outline checkpoint (arch/BOM/status). **Josh’s OPI Summit lightning talk** (15 Oct) is prepared on the **WTIT / Network Engine** side — not tracked as a Blueprint deliverable here.
+Useful as an in-repo outline checkpoint (arch/BOM/status + evidence if ready). **Sponsor Summit talk** (15 Oct) is prepared by Josh / WTIT — talk notes are **not** public Blueprint deliverables.
 
 Minimum Blueprint package by mid-Oct if aiming for public outline readiness:
 
 - Architecture 1a outline / diagram  
-- BOM stub with lab pins  
-- Offload status: evidence snippet or honest “in progress”  
+- BOM stub with lab pins (host = Ubuntu/Debian; DOCA-Host `doca-all`)  
+- Offload status: **path-forward evidence** preferred (HW vDPA + OVS-DOCA)  
 - Partners table (supported vs targeted)  
 
-Talk AV/slides/membership narrative: **out of scope** for this repo.
+Talk AV/slides / membership narrative: **out of scope** for this repo.
 
 ### Gate A — Phase 1a complete
 
@@ -60,7 +60,7 @@ Depends on sponsor **S2**:
 | **B** 1a+1b required | Gate A + 1b offload proof + dual-phase docs/IaC complete |
 | **C** 1a + 1b best-effort | Gate A + 1b attempted; gaps explicit in validation/guide; still six deliverables |
 
-**TSC / showcase bar (regardless of S2):** six Framework deliverables present, public, evidence-backed; no private email/board content; partner attribution clear; BP-003/BP-004 IDs reconciled.
+**TSC / showcase bar (regardless of S2):** six Framework deliverables present, public, evidence-backed; no private email/board content; partner attribution clear; public ID remains **BP-003**.
 
 ---
 

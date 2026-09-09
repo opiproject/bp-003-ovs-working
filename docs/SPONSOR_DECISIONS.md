@@ -84,12 +84,28 @@ What should a TSC or customer SA believe this Blueprint proves?
 | Item | Pick | Implication |
 |------|------|-------------|
 | Second BF3 for live migration | **No** | **Defer LM**; document as known limitation |
-| OpenShift for 1b | **Yes — should happen** | Plan 1b; publish bar still **best-effort** |
-| RHEL publish pin | **9 or 10 / lab-default** | Freeze exact minor from OPI Lab image |
+| OpenShift for 1b | **Yes — should happen** | Plan 1b; publish bar still **best-effort**; OPI showcase emphasis |
+| 1a host OS (superseded 2026-09-09) | Was RHEL lab-default | See execution freezes: Ubuntu/Debian lab pin |
 | Lab / onboarding | **Done** (2026-08-28 refresh) | Yash ready; OPI Lab available |
-| Summit lightning talk | **Josh / WTIT·NE owns** | Out of Blueprint gap register |
+| Summit talk (external) | **Josh / WTIT owns** | Talk notes stay **private** — not a Blueprint deliverable |
 | LICENSE | **OPI project handles** | Not a local kickoff gate |
 | Vendors | **NVIDIA** testing; **Intel** + **Marvell** targeted; other lab cards = future | See [`partners.md`](partners.md) |
+
+## Execution freezes — **2026-09-09**
+
+| Item | Pick | Implication |
+|------|------|-------------|
+| Blueprint ID in public narrative | **BP-003** | Do not dual-brand registry IDs |
+| Working repo | `opiproject/bp-003-ovs-working` | Staging for docs/evidence |
+| Publish target | **`opiproject/opi-blueprints`** | Decision #7=A unchanged |
+| Phase 1a host OS | **Ubuntu/Debian (lab pin)** | KVM on-ramp; pin exact release from OPI Lab. Rocky/RHEL optional later — not 1a critical path |
+| DOCA-Host profile (x86) | **`doca-all`** | Prefer over inbox mlx5 |
+| Guest attach (1a) | **DPDK HW vDPA + vhost-user + host VF**; Arm **OVS-DOCA** | Guest stock virtio-net. Kernel `mlx5_vdpa` demoted (DOCA dummy) |
+| Offload-proof contract | **Accepted as V1** (attach updated) | See `docs/validation/offload-proof-contract.md` |
+| OPI showcase emphasis | **Phase 1b OpenShift Virt** | 1a proves acceleration; 1b is the platform showpiece (S2=C) |
+| Pre-Summit evidence | **Want path-forward artifact** | HW vDPA + OVS-DOCA signals |
+| Review path (working repo) | Sponsor + Cursor agents | LF reviewer TBD at registry PR |
+| Summit talk notes | **Private only** | WTIT owns slides/script; not in public tree |
 
 ## Record
 
@@ -105,4 +121,4 @@ What should a TSC or customer SA believe this Blueprint proves?
 | 8 | **A** | 2026-08-28 |
 | 9 | **B** | 2026-08-28 |
 
-**Hard showcase date:** OPI Summit 15 Oct — **talk owned by Josh (WTIT/NE)**; Blueprint tracks technical Gate A
+**Hard showcase date:** OPI Summit 15 Oct 2026 — talk owned by Josh (WTIT); Blueprint tracks technical Gate A' / evidence. Talk script stays out of this public tree.

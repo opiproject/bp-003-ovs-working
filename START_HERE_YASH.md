@@ -20,7 +20,7 @@ Lab access and onboarding are **done**. This tree is the working source of truth
 | 6 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | Gates A' / A / B |
 | 7 | [`specs/Intern_JD_OVS_DPU_Offload.md`](specs/Intern_JD_OVS_DPU_Offload.md) | Role scope (v1-aligned) |
 | 8 | [`specs/intern-workplan.md`](specs/intern-workplan.md) | What to do next |
-| 9 | [`docs/validation/offload-proof-contract.md`](docs/validation/offload-proof-contract.md) | How “offload proven” is defined (draft → mentor accept) |
+| 9 | [`docs/validation/offload-proof-contract.md`](docs/validation/offload-proof-contract.md) | How “offload proven” is defined (**accepted**) |
 | 10 | [`docs/validation/limitations.md`](docs/validation/limitations.md) | LM deferred, etc. |
 | 11 | [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md) | Topology |
 | 11b | [`docs/architecture/vdpa-and-eswitch.md`](docs/architecture/vdpa-and-eswitch.md) | **vDPA vs e-switch ownership** (read if confused) |
@@ -37,7 +37,7 @@ Then use [`specs/deliverables-checklist.md`](specs/deliverables-checklist.md) as
 
 1. BlueField-3 in **DPU mode**  
 2. **OVS-DOCA** (not kernel/TC-flower/switchdev as the hero path)  
-3. Guests: stock **virtio-net** over **vDPA** (prefer host **mlx5_vdpa**)  
+3. Guests: stock **virtio-net** over **DPDK HW vDPA + vhost-user** (host VF; Arm OVS-DOCA)  
 4. **Evidence** that offload is in hardware + a performance baseline  
 5. Package as an OPI Blueprint: architecture, BOM, deployment guide + IaC, narrative, validation, partner attribution  
 
@@ -49,8 +49,8 @@ Then use [`specs/deliverables-checklist.md`](specs/deliverables-checklist.md) as
 
 | Do | Don’t |
 |----|-------|
-| KVM-first (RHEL = lab OS pin) | Treat OpenShift as the only success bar |
-| OVS-DOCA + vDPA | Ship TC-flower/switchdev as “the” offload proof |
+| KVM on-ramp (Ubuntu/Debian lab) | Treat OpenShift as required for Gate A |
+| OVS-DOCA + DPDK HW vDPA | Ship TC-flower/switchdev as “the” offload proof |
 | Document LM as **deferred** (one BF3) | Block Gate A waiting for live migration |
 | Intel/Marvell = **targeted later** | Claim multi-vendor validated in v1 |
 | Public docs only in git | Commit secrets, VPN creds, or `private/` |
@@ -60,9 +60,9 @@ Then use [`specs/deliverables-checklist.md`](specs/deliverables-checklist.md) as
 
 ## Your next 3 actions
 
-1. **BOM pins from lab** → fill [`docs/bom.md`](docs/bom.md) (DPU mode, FW/BFB, DOCA train, RHEL major.minor).  
-2. **Mentor accept** on [`docs/validation/offload-proof-contract.md`](docs/validation/offload-proof-contract.md) (bring questions to Wed office hours).  
-3. **First offload attempt** → store redacted output under [`docs/validation/results/`](docs/validation/results/).
+1. **BOM pins from lab** → fill [`docs/bom.md`](docs/bom.md) (DPU mode, FW/BFB, DOCA train, Ubuntu/Debian release).  
+2. Read [`docs/troubleshooting/vdpa-hw-attach.md`](docs/troubleshooting/vdpa-hw-attach.md) — do **not** chase kernel `mlx5_vdpa` as the critical path.  
+3. **First path-forward evidence** (HW vDPA + OVS-DOCA) → [`docs/validation/results/`](docs/validation/results/); contract is **accepted** — bring questions to Wed office hours.
 
 Full sequence: [`specs/intern-workplan.md`](specs/intern-workplan.md).
 
@@ -96,7 +96,7 @@ Escalation: access issues → lab admin → Josh if stale. Design “is this off
 
 ## Out of your critical path
 
-- Josh’s OPI Summit **lightning talk** (WTIT / Network Engine) — not a Blueprint ticket.  
+- Josh’s OPI Summit talk (WTIT) — private; not a Blueprint ticket.  
 - LICENSE boilerplate — OPI project norms at publish time.  
 - Second-vendor ports and DPU Operator parity — later.
 

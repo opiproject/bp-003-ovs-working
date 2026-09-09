@@ -1,6 +1,6 @@
 # Blueprint 003 — Project Charter
 
-**IDs:** Dashboard BP-003 · Registry BP-004 (reconcile at publish)  
+**IDs:** **BP-003** (public / dashboard). Registry metadata reconcile at publish if needed — do not dual-brand.  
 **Title:** Multi-Tenant Network Isolation with OVS Offload on NVIDIA BlueField-3  
 **Stage:** Build & Document · **Category:** networking  
 **Contributing partner:** WorldTech IT · **Sponsor:** Josh Brooks (OPI Governing Board)  
@@ -34,11 +34,11 @@ An **OPI Blueprint**: a deployable reference architecture that an enterprise SA 
 **Locked reference stack**
 
 - DPU: NVIDIA **BlueField-3**, DPU mode  
-- Offload: **OVS-DOCA** + **vDPA** (guest = stock virtio-net)  
-- Hypervisor path: **KVM/libvirt** (Phase 1a) — primary reference  
-- Host OS for 1a: **RHEL** as the validated placeholder/reference distro (pin a minor for BOM reproducibility)  
-- **Not** the primary path: OVS-kernel / TC-flower / switchdev  
-- Phase order: **1a KVM → 1b OpenShift Virtualization** (DPF + accelerated OVN-Kubernetes / KubeVirt); 1b does not redefine the KVM success bar
+- Offload: **OVS-DOCA** (Arm) + **DPDK hardware vDPA** (host) — guest = stock virtio-net  
+- Hypervisor path: **KVM/libvirt** (Phase 1a) — acceleration on-ramp  
+- Host OS for 1a: **Ubuntu/Debian** lab pin (exact release from OPI Lab BOM)  
+- **Not** the primary path: OVS-kernel / TC-flower / switchdev; kernel `mlx5_vdpa` under DOCA-Host  
+- Phase order: **1a KVM → 1b OpenShift Virtualization** (DPF + accelerated OVN-Kubernetes / KubeVirt); **1b is the OPI showcase** (best-effort publish bar)
 
 NVIDIA is the **technical reference** (mature public tooling). Membership status does not change that choice.
 
@@ -57,7 +57,7 @@ NVIDIA is the **technical reference** (mature public tooling). Membership status
 
 | Audience | What they get |
 |----------|----------------|
-| **Platform / virt engineer** | How to stand up offloaded OVS + vDPA under KVM (RHEL reference host) |
+| **Platform / virt engineer** | How to stand up offloaded OVS + HW vDPA under KVM (Ubuntu/Debian lab host) |
 | **OpenShift platform ops** | How the same intent maps via DPF + OVN-K + KubeVirt (best-effort in v1) |
 | **Network / SecOps architect** | Isolation + offload rationale; what is proven vs deferred / targeted |
 | **SI / contributing partner** | BOM + IaC + attribution path to services |
@@ -70,5 +70,5 @@ NVIDIA is the **technical reference** (mature public tooling). Membership status
 1. **Direction before tickets** — charter/roadmap/non-goals bind scope; workplans follow.  
 2. **Evidence over assertion** — every claim in docs has config or test evidence in-repo.  
 3. **Public-by-default** — publish path is GitHub under `opiproject`; `private/` never ships.  
-4. **KVM-first on-ramp** — Phase 1a (KVM + OVS-DOCA + vDPA) is the hard v1 proof and the low-lift validation path. RHEL is one validated host OS for the public BOM. OpenShift Virt is best-effort packaging, not the gate that redefines success.  
-5. **Partner posture** — **WTIT leads** delivery; other **OPI members** credited where involved; call out **current supported** reference vendors (BF3) and **targeted** later vendors without claiming them as done. NVIDIA = reference silicon/tooling (not an OPI membership claim). Red Hat = member platform stack for RHEL/OpenShift paths. Post-intern maintenance: **OPI community / TSC process** (sponsor decision #9).
+4. **KVM on-ramp, OpenShift Virt showcase** — Phase 1a (KVM + OVS-DOCA + HW vDPA) proves acceleration. Phase 1b OpenShift Virt is the OPI/platform showpiece (best-effort gaps OK).  
+5. **Partner posture** — **WTIT leads** delivery; other **OPI members** credited where involved; call out **current supported** reference vendors (BF3) and **targeted** later vendors without claiming them as done. NVIDIA = reference silicon/tooling (not an OPI membership claim). Red Hat = member platform stack for OpenShift Virt (and optional RHEL ports). Post-intern maintenance: **OPI community / TSC process** (sponsor decision #9).

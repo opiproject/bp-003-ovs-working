@@ -10,7 +10,7 @@
 ## 1. Executive summary
 
 - One paragraph: multi-tenant VM networking with **OVS hardware-offloaded to a DPU** (BF3 reference).
-- What the reader can replicate: Phase 1a RHEL/KVM; Phase 1b OpenShift Virtualization (per publish bar).
+- What the reader can replicate: Phase 1a KVM (Ubuntu/Debian lab); Phase 1b OpenShift Virtualization (OPI showcase; per publish bar).
 - What success looks like: offload proven, BOM/guide/IaC in hand, host CPU reclaimed for workloads.
 
 ## 2. Problem statement
@@ -30,7 +30,7 @@
 
 - Reference DPU: NVIDIA BlueField-3 in DPU mode.
 - Datapath: **OVS-DOCA**; guest attach: **vDPA** / stock virtio-net.
-- Phase 1a: RHEL + KVM/libvirt.
+- Phase 1a: Ubuntu/Debian + KVM/libvirt + DPDK HW vDPA.
 - Phase 1b: OpenShift Virtualization via DPF + accelerated OVN-Kubernetes + KubeVirt.
 - Explicit: not the OVS-kernel/TC-flower/switchdev primary path.
 

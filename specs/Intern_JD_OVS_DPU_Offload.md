@@ -8,7 +8,7 @@ This JD is aligned to the **frozen** project direction (2026-08-28). Historical 
 
 ## About the project
 
-Produce an OPI **Blueprint** for VM networking through OVS **fully hardware-offloaded** to a DPU: **KVM first** (RHEL as validated lab OS), then **OpenShift Virtualization** (best-effort in v1).  
+Produce an OPI **Blueprint** for VM networking through OVS **fully hardware-offloaded** to a DPU: **KVM first** (Ubuntu/Debian lab host), then **OpenShift Virtualization** as the OPI showcase (best-effort in v1).
 
 **Current supported reference:** NVIDIA BlueField-3 (OVS-DOCA + vDPA + DPF for OpenShift path).  
 **North-star direction:** vendor-portable pattern; **Intel / Marvell / other OPI Lab cards** are **targeted later** — not v1 required deliverables.
@@ -17,8 +17,8 @@ Produce an OPI **Blueprint** for VM networking through OVS **fully hardware-offl
 
 ### Phase 1a — BF3 + KVM (required)
 
-- RHEL/KVM: OVS fully offloaded to BF3 in **DPU mode** via **OVS-DOCA** (not OVS-kernel/TC-flower/switchdev as the primary path).  
-- Guests attach over **vDPA** (stock virtio-net); prefer **host mlx5_vdpa / vhost-vdpa**.  
+- KVM: OVS fully offloaded to BF3 in **DPU mode** via **OVS-DOCA** (not OVS-kernel/TC-flower/switchdev as the primary path).
+- Guests attach over **hardware vDPA** (stock virtio-net): **DPDK vDPA + vhost-user** on host VF; Arm OVS-DOCA.
 - Prove offload is in **hardware**; baseline throughput/pps.  
 - **Live migration:** deferred this cycle (single BF3) — document as a known limitation, do not block Gate A on LM.
 
@@ -35,7 +35,7 @@ Produce an OPI **Blueprint** for VM networking through OVS **fully hardware-offl
 
 ## Required skills
 
-- Linux, Red Hat family (RHEL 9 / 10): systemd, networking, kernel modules, troubleshooting  
+- Linux (Ubuntu/Debian lab; RHEL-family familiarity helpful): systemd, networking, kernel modules, troubleshooting
 - KVM / libvirt / QEMU: VM lifecycle, virtio / vhost, vDPA concepts  
 - OVS: bridges, flows, OpenFlow, datapath, hardware-offload concepts  
 - Kubernetes basics: CRDs, operators, CNI — enough to grow into OpenShift Virt / OVN-K  
@@ -44,7 +44,7 @@ Produce an OPI **Blueprint** for VM networking through OVS **fully hardware-offl
 ## Preferred
 
 - OVS-DOCA, DOCA SDK, DPF on BlueField  
-- vDPA hands-on (`mlx5_vdpa`, `vhost-vdpa`, libvirt)  
+- HW vDPA hands-on (DPDK `vdpa` / vhost-user, libvirt/QEMU)
 - OVN / OVN-Kubernetes; OpenShift Virtualization  
 - Go / Python / Bash; public Git / DCO workflow  
 

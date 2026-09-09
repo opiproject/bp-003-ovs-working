@@ -10,7 +10,7 @@ Goal: commit-safe for `opiproject`; intern clarity without private or over-scope
 ### KEEP (public)
 
 - OPI mission one-liner; Blueprint as reference architecture (not demo).
-- Track 1 technical scope: BF3, OVS-DOCA, vDPA, RHEL/KVM, then OpenShift Virt / DPF / OVN-K / KubeVirt.
+- Track 1 technical scope: BF3, OVS-DOCA, DPDK HW vDPA, KVM (Ubuntu/Debian lab), then OpenShift Virt / DPF / OVN-K / KubeVirt.
 - Required/preferred skills lists (Linux, KVM, OVS, k8s/OVN concepts, networking).
 - Deliverables aligned to Framework: reproducible blueprint, validation (offload proof, perf; LM deferred per limitations).
 - Profile traits: self-directed, docs-as-deliverable, works in the open.
@@ -39,7 +39,7 @@ v1 = BF3 reference (1a→1b). Multi-vendor and operator-parity are explicitly la
 
 - Phase 1: LFID, GitHub/DCO, Slack, IDE, SSH, VPN, BF3 assignment blanks, RH/NVIDIA access blanks.
 - Phase 2: governance who’s-who blanks, mentors, glossary, DPU Operator gap as **orientation** (not v1 commit).
-- Phase 3: RHEL/KVM/OVS/BF3/vDPA standup smoke steps.
+- Phase 3: KVM/OVS/BF3/HW-vDPA standup smoke steps.
 - Phase 4: define offload-validated, harness, live migration criteria, doc location.
 
 ### SCRUB or REFRAME
@@ -62,4 +62,4 @@ v1 = BF3 reference (1a→1b). Multi-vendor and operator-parity are explicitly la
 ## Handoff notes (`INTERN_HANDOFF_NOTES.md`)
 
 - KEEP: norms, DoD pointers, risks.
-- SCRUB: paths to `SEED_CONTEXT` / private seed; BP-004-only confusion — point at CHARTER + ID reconcile instead.
+- SCRUB: paths to `SEED_CONTEXT` / private seed; do not dual-brand registry IDs — public ID is **BP-003**.

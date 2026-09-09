@@ -12,7 +12,7 @@ Do not schedule Track 2 / deferred items without sponsor reopen.
 ## 0. Orient — **largely complete**
 
 - [x] Access / onboarding (Yash ready; OPI Lab done — sponsor 2026-08-28)
-- [ ] Confirm BF3 **DPU mode** + record RHEL minor + DOCA/BFB from lab → BOM
+- [ ] Confirm BF3 **DPU mode** + record Ubuntu/Debian release + DOCA/BFB from lab → BOM
 - [ ] Offload-proof contract → mentor accept (V1)
 - [x] Stubs landed: architecture, bom, validation, artifacts skeletons
 - [ ] **Exit to 1a:** pins frozen + V1 accepted + first offload attempt
@@ -34,9 +34,9 @@ In-repo outline (arch/BOM/status). **Not** Josh’s personal Summit lightning-ta
 
 ### Environment
 
-- [ ] RHEL (lab-default minor); KVM lifecycle on non-offloaded path
+- [ ] Ubuntu/Debian (lab-default release); KVM lifecycle on non-offloaded path
 - [ ] Software OVS basics, then BF3 DPU mode + OVS-DOCA
-- [ ] vDPA tooling; virtio-net guest over **vhost-vdpa / mlx5_vdpa**
+- [ ] DPDK HW vDPA + vhost-user; virtio-net guest (not kernel mlx5_vdpa critical path)
 
 ### Prove & measure
 
@@ -66,7 +66,7 @@ In-repo outline (arch/BOM/status). **Not** Josh’s personal Summit lightning-ta
 
 ## 3. Publish
 
-- [ ] ID reconcile (BP-003 / BP-004); README status; maintenance note
+- [ ] ID hygiene (public **BP-003**); README status; maintenance note
 - [ ] LICENSE / DCO / CONTRIBUTING present
 - [ ] PR to registry-linked `opiproject` repo
 - [ ] TSC one-pager from public docs only

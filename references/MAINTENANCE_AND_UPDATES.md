@@ -12,7 +12,7 @@ This project intentionally stays simple: docs-first, artifact-backed, easy for s
 
 1. Local folder artifacts (`docs/`, `specs/`, `artifacts/`)
 2. OPI blueprint framework requirements
-3. OPI blueprint registry entry (BP-004 metadata)
+3. OPI blueprint registry entry (BP-003 metadata)
 
 ## Plugin/Workflow Dependencies
 

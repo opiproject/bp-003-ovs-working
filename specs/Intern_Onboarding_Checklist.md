@@ -28,7 +28,7 @@ Core identity, GitHub, lab VPN, BF3 assignment, and Cursor/IDE path confirmed co
 - [ ] Lab reservation/scheduling notes (optional): ____________________
 
 ### Red Hat / NVIDIA
-- [x] RHEL path via OPI Lab entitlements available
+- [x] Lab host OS path via OPI Lab available (Ubuntu/Debian pin)
 - [ ] OpenShift cluster for 1b (when ready): ____________________
 - [x] NVIDIA/DOCA download path available as needed for lab
 - [ ] Second-vendor access — **deferred** (not v1)
@@ -49,12 +49,12 @@ Core identity, GitHub, lab VPN, BF3 assignment, and Cursor/IDE path confirmed co
 
 ## Phase 3 - Technical Environment Standup — **IN PROGRESS**
 
-- [ ] RHEL on assigned box — record major.minor in `docs/bom.md`
+- [ ] Ubuntu/Debian on assigned box — record release in `docs/bom.md`
 - [ ] KVM / libvirt basic VM lifecycle
 - [ ] OVS non-offloaded basics, then OVS-DOCA
 - [ ] BF3 DPU mode confirmed; DOCA/BFB pinned in BOM
 - [ ] Representors visible as needed for DOCA path
-- [ ] vDPA / mlx5_vdpa / vhost-vdpa path
+- [ ] DPDK HW vDPA / vhost-user path (not kernel mlx5_vdpa critical path)
 - [ ] Smoke: virtio-net guest over vDPA; offload per V1 contract
 
 ## Phase 4 - Readiness Check

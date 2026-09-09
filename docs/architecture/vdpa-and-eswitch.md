@@ -21,17 +21,17 @@ In **DPU mode**, the **DPU (Arm / ECPF)** owns the e-switch — not the x86 host
 | **1. Hardware e-switch** | ASIC switch inside the BlueField | **DPU** in DPU mode (ECPF / Arm side) | Real datapath for established flows |
 | **2. Representors** | Netdevs that *represent* VFs/SFs/ports to software | Visible on **Arm** (and related control plane) | Ports OVS attaches to / steers |
 | **3. OVS-DOCA** | Open vSwitch using DOCA Flow to program HW | Runs on **DPU Arm** | Control plane + offload programming — **hero of this Blueprint** |
-| **4. vDPA (`mlx5_vdpa` + `vhost-vdpa`)** | Virtio datapath acceleration for VMs | **Host** hypervisor stack (QEMU/libvirt) + device plumbing into DPU | Guest attach model — **not** “the switch” |
+| **4. HW vDPA (DPDK + vhost-user)** | Virtio datapath acceleration for VMs | **Host** hypervisor (QEMU) + DPDK vdpa on VF | Guest attach model — **not** “the switch” |
 | **5. Guest virtio-net** | Stock virtio NIC in the VM | Guest OS | Unchanged guest — no NVIDIA driver in guest |
 
 ```text
   [ Guest: stock virtio-net ]
             |  virtio
-  [ Host: QEMU + vhost-vdpa + mlx5_vdpa ]     ← vDPA lives HERE (attach)
+  [ Host: QEMU + vhost-user + DPDK mlx5 vDPA ]   ← attach HERE
             |
-  [ DPU Arm: OVS-DOCA + representors ]        ← policy / offload programming
+  [ DPU Arm: OVS-DOCA + VF representors ]        ← policy / offload programming
             |  programs
-  [ BF3 hardware e-switch ]                   ← owned by DPU in DPU mode
+  [ BF3 hardware e-switch ]                      ← owned by DPU in DPU mode
             |
   [ Physical uplink ]
 ```
@@ -43,7 +43,7 @@ In **DPU mode**, the **DPU (Arm / ECPF)** owns the e-switch — not the x86 host
 ### vDPA **is**
 
 - A **VM NIC attachment** technology: guest keeps **stock virtio-net**.  
-- The bridge between **hypervisor** (QEMU/`vhost-vdpa`) and **accelerated virtio datapath** (`mlx5_vdpa` on NVIDIA).  
+- The bridge between **hypervisor** (QEMU/vhost-user) and **accelerated virtio datapath** (DPDK mlx5 vDPA on a host VF).  
 - Why we can talk about **live migration–friendly** virtio later (even though LM is deferred this cycle).  
 - Part of **Phase 1a success**: prove the guest is on vDPA, **not** VF passthrough labeled as “offload.”
 
@@ -98,9 +98,9 @@ If lab docs say “enable switchdev on the Arm PF,” that can still be **true o
 
 ## How this maps to your workplan
 
-1. Confirm **DPU mode** + pin DOCA/BFB/RHEL → `docs/bom.md`  
-2. Bring up **OVS-DOCA** on Arm; representors/ports as required by your pin  
-3. Attach guest via **vDPA** (libvirt/`vhost-vdpa`)  
+1. Confirm **DPU mode** + pin DOCA/BFB/host OS → `docs/bom.md`  
+2. Bring up **OVS-DOCA** on Arm; VF representors as required  
+3. Attach guest via **DPDK HW vDPA + vhost-user**  
 4. Collect offload evidence per `docs/validation/offload-proof-contract.md`  
 
 Mentor Wed office hours: bring `ovs-vsctl` / `dpctl` snippets if ownership still feels fuzzy — we’ll read them against this model.

@@ -1,3 +1,3 @@
 # Diagram exports
 
-PNG/SVG for Summit slide 3.
+PNG/SVG for Blueprint docs / Gate A' package.

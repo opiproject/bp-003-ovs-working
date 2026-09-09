@@ -15,11 +15,11 @@ Do not treat this file as scope of record.
 
 - **Mentor office hours:** Wednesdays **0900–1100** (confirm timezone with Josh — typically US Central unless stated otherwise).
 - **Intern:** Yash Singh — onboarded; OPI Lab access available.
-- Weekly status against Gate A (1a), then 1b best-effort. Blueprint outline milestones are in-repo; Josh’s OPI Summit lightning talk is owned on the WTIT/NE side (not a Blueprint ticket).
+- Weekly status against Gate A (1a), then 1b best-effort. Blueprint outline milestones are in-repo; Josh’s OPI Summit talk is owned by WTIT (private; not a Blueprint ticket).
 
 ## Near-term
 
-1. Pins from lab: DPU mode, DOCA/BFB, RHEL minor → `docs/bom.md`.  
+1. Pins from lab: DPU mode, DOCA/BFB, Ubuntu/Debian release → `docs/bom.md`.
 2. Mentor accept offload-proof contract (`docs/validation/offload-proof-contract.md`).  
 3. Drive Phase 1a offload evidence → Gate A.  
 4. Track acceptance in [`../specs/deliverables-checklist.md`](../specs/deliverables-checklist.md).
@@ -27,6 +27,6 @@ Do not treat this file as scope of record.
 ## Risks
 
 - Lab/VPN/BF3 access latency (P0).  
-- Version skew: DOCA ↔ RHEL ↔ OpenShift.  
+- Version skew: DOCA ↔ host OS ↔ OpenShift.
 - Ambiguous offload-proof methodology until V1 accepted.  
 - Scope pressure toward Track 2 / LM before Gate A — refuse; use NON_GOALS + limitations.md.

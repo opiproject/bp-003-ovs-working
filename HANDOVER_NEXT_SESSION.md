@@ -10,7 +10,7 @@ Local Blueprint working tree for BP-003. Intern package entry: **`START_HERE_YAS
 ## Current state (2026-08-28)
 
 - Sponsor decisions frozen; lab + Yash onboarding done  
-- Summit lightning talk = Josh / WTIT·NE (not Blueprint execution)  
+- Summit talk = Josh / WTIT (private notes; not Blueprint execution)  
 - Next: BOM pins + V1 contract accept + offload evidence  
 
 ## Mentor

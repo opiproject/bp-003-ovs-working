@@ -13,7 +13,7 @@ Direction: [`../docs/CHARTER.md`](../docs/CHARTER.md) · [`../docs/ROADMAP.md`](
 | D2 | Sponsor decisions recorded | `done` | `docs/SPONSOR_DECISIONS.md` (frozen 2026-08-28) |
 | D3 | Lab freezes (LM, OCP, RHEL policy, Summit) | `done` | same — optional freezes |
 | D4 | Publish repo confirmed | `todo` | decision #7=A; access open |
-| D5 | BP-003 / BP-004 IDs reconciled | `todo` | README + registry |
+| D5 | Public ID stays BP-003 | `done` | sponsor 2026-09-09; registry metadata at publish only |
 | D6 | `private/` scrub before upstream push | `todo` | pre-push checklist |
 
 ---
@@ -33,7 +33,7 @@ Direction: [`../docs/CHARTER.md`](../docs/CHARTER.md) · [`../docs/ROADMAP.md`](
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
 | M1 | Server / BF3 SKU notes | `todo` | |
-| M2 | RHEL + kernel + OVS-DOCA + DOCA/BFB pins | `wip` | `docs/bom.md` stub |
+| M2 | Host OS + kernel + OVS-DOCA + DOCA/BFB pins | `wip` | Ubuntu/Debian lab; DOCA-Host `doca-all`; versions NEED_LAB |
 | M3 | OpenShift / CNV / DPF / OVN-K pins | `todo` | per S2 |
 | M4 | License / entitlement notes (no secrets) | `todo` | `docs/bom.md` |
 
@@ -58,7 +58,7 @@ Direction: [`../docs/CHARTER.md`](../docs/CHARTER.md) · [`../docs/ROADMAP.md`](
 
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
-| V1 | Offload-proof contract agreed | `wip` | `docs/validation/offload-proof-contract.md` DRAFT |
+| V1 | Offload-proof contract agreed | `done` | accepted 2026-09-09 |
 | V2 | 1a offload evidence | `todo` | |
 | V3 | 1a performance table | `todo` | harness pinned |
 | V4 | 1a live migration result | `deferred` | single BF3 — see `docs/validation/limitations.md` |

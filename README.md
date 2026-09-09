@@ -1,9 +1,10 @@
 # Multi-Tenant Network Isolation with OVS Offload on NVIDIA BlueField-3
 
-**Dashboard ID:** BP-003 · **Registry ID:** BP-004 (reconcile when publishing)  
+**Blueprint ID:** BP-003  
 **Stage:** Build & Document · **Category:** networking  
 **Contributing partner:** WorldTech IT · **Sponsor:** Josh Brooks (OPI Governing Board)  
-**Execution:** LFX mentorship — **Yash Singh** (intern); sponsor sets direction
+**Execution:** LFX mentorship — **Yash Singh** (intern); sponsor sets direction  
+**Working repo:** [opiproject/bp-003-ovs-working](https://github.com/opiproject/bp-003-ovs-working) · **Publish target:** `opi-blueprints` registry
 
 ## Direction (start here)
 
@@ -23,11 +24,11 @@
 
 **OVS hardware offload on NVIDIA BlueField-3** for VM networking:
 
-1. **Phase 1a — RHEL / KVM** — BF3 DPU mode, OVS-DOCA, guests via vDPA  
-2. **Phase 1b — OpenShift Virtualization** — DPF + accelerated OVN-Kubernetes / KubeVirt  
+1. **Phase 1a — KVM (Ubuntu/Debian lab)** — BF3 DPU mode, OVS-DOCA, guests via DPDK HW vDPA + vhost-user  
+2. **Phase 1b — OpenShift Virtualization** — DPF + accelerated OVN-Kubernetes / KubeVirt (**OPI showcase emphasis**)  
 
-Offload path (locked): **OVS-DOCA** + **vDPA** (stock virtio-net in guest).  
-Not OVS-kernel / TC-flower / switchdev as the primary path.
+Offload path (locked): **OVS-DOCA** (Arm) + **DPDK hardware vDPA** (host) + stock virtio-net in guest.  
+Not OVS-kernel / TC-flower / switchdev as the primary path. Not kernel `mlx5_vdpa` under DOCA-Host.
 
 Second-vendor and other deferrals: [`docs/NON_GOALS.md`](docs/NON_GOALS.md).
 
@@ -38,7 +39,7 @@ Second-vendor and other deferrals: [`docs/NON_GOALS.md`](docs/NON_GOALS.md).
 | Party | Role |
 |-------|------|
 | WorldTech IT | Contributing partner / Blueprint delivery |
-| Red Hat | RHEL, OpenShift Virtualization, OVN-Kubernetes |
+| Red Hat | OpenShift Virtualization, OVN-Kubernetes (Phase 1b); optional RHEL port |
 | NVIDIA | Reference DPU (BF3) + DOCA/DPF tooling (not an OPI membership claim) |
 
 ## Framework deliverables
