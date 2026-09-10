@@ -11,7 +11,13 @@ Lab write-up: [Investigating-stub-mlx5_vdpa](https://github.com/opiproject/bp-00
 
 DOCA-Host ships an explicit **dummy** `mlx5_vdpa` module (ABI fence). Hardware can still create `mlx5_core.vnet.*` on a VF — that does **not** yield a working kernel vDPA backend under DOCA.
 
-NVIDIA’s documented **ASAP2 Hardware vDPA** path is:
+## North-star topology
+
+![BF3 DPU ASAP² / e-switch topology](../architecture/exports/bf3-dpu-asap2-eswitch.png)
+
+Host VF ↔ Arm OVS representor ↔ E-Switch. Full lens: [`architecture-1a.md`](../architecture/architecture-1a.md).
+
+NVIDIA’s documented **ASAP2 Hardware vDPA** path on that picture is:
 
 | Side | Role |
 |------|------|

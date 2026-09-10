@@ -26,25 +26,9 @@ A platform / virt engineer can **reproduce** a credible OPI reference for **KVM 
 
 ## Architecture direction
 
-```mermaid
-flowchart LR
-  subgraph Guest["Guest VM"]
-    VN[stock virtio-net]
-  end
-  subgraph Host["Ubuntu/Debian KVM/libvirt"]
-    QEMU[QEMU + vhost-user]
-    VDPA[DPDK mlx5 vDPA]
-  end
-  subgraph DPU["BF3 Arm — DPU mode"]
-    OVS["OVS-DOCA"]
-    REP[VF representors]
-  end
-  subgraph HW["BF3 e-switch"]
-    ES[Hardware datapath]
-  end
-  VN --> QEMU --> VDPA --> REP --> OVS
-  OVS -.->|offload| ES
-```
+![BF3 DPU ASAP² / e-switch topology](architecture/exports/bf3-dpu-asap2-eswitch.png)
+
+Drive Phase 1a to that Host VF / Arm OVS / E-Switch picture. Attach path: guest virtio-net → DPDK HW vDPA on host VF (not passthrough).
 
 Detail: [`architecture/architecture-1a.md`](architecture/architecture-1a.md) · [`troubleshooting/vdpa-hw-attach.md`](troubleshooting/vdpa-hw-attach.md).
 

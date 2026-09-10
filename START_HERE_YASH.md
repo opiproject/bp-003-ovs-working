@@ -8,6 +8,16 @@ Lab access and onboarding are **done**. This tree is the working source of truth
 
 ---
 
+## Drive to this picture
+
+![BF3 DPU ASAP² / e-switch topology](docs/architecture/exports/bf3-dpu-asap2-eswitch.png)
+
+**That** is Phase 1a/1b success: Host VF ↔ Arm OVS representors ↔ E-Switch offload.  
+Detail + Blueprint lens: [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md).  
+Guest = stock **virtio-net**; VF = host **DPDK HW vDPA** — not passthrough.
+
+---
+
 ## Read in this order (≈45–60 min)
 
 | # | File | Why |
@@ -22,8 +32,9 @@ Lab access and onboarding are **done**. This tree is the working source of truth
 | 8 | [`specs/intern-workplan.md`](specs/intern-workplan.md) | What to do next |
 | 9 | [`docs/validation/offload-proof-contract.md`](docs/validation/offload-proof-contract.md) | How “offload proven” is defined (**accepted**) |
 | 10 | [`docs/validation/limitations.md`](docs/validation/limitations.md) | LM deferred, etc. |
-| 11 | [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md) | Topology |
+| 11 | [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md) | Topology — **ASAP² / E-Switch north-star diagram** |
 | 11b | [`docs/architecture/vdpa-and-eswitch.md`](docs/architecture/vdpa-and-eswitch.md) | **vDPA vs e-switch ownership** (read if confused) |
+| 11c | [`docs/troubleshooting/vdpa-hw-attach.md`](docs/troubleshooting/vdpa-hw-attach.md) | How we attach VMs on that diagram (DPDK HW vDPA) |
 | 12 | [`docs/glossary.md`](docs/glossary.md) | Terms |
 | 13 | [`docs/KICKOFF_GAPS.md`](docs/KICKOFF_GAPS.md) | What’s still open for execution |
 

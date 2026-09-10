@@ -42,7 +42,7 @@
 | X02 | P0 | Freeze **DOCA/BFB** + **Ubuntu/Debian release** from lab | Yash → Josh accept | Write pins into BOM |
 | X04 | P0 | First **HW vDPA + OVS-DOCA evidence** | Yash | Per V1 contract; `docs/validation/results/` |
 | X06 | P1 | Performance harness + baseline table | Yash | After offload proof |
-| X07 | P1 | Architecture diagram export (PNG/SVG) | Yash | From `docs/architecture/architecture-1a.md` |
+| X07 | P1 | Architecture diagram export (PNG/SVG) | Josh | **Done** — `docs/architecture/exports/bf3-dpu-asap2-eswitch.png` (ASAP² north-star) |
 | X08 | P1 | Registry-linked **write/PR path** | Josh → LF | When first PR to `opi-blueprints` is near |
 | X09 | P2 | Partner engage/contact line | Josh | Optional polish on `partners.md` |
 

@@ -6,11 +6,19 @@
 **Execution:** LFX mentorship — **Yash Singh** (intern); sponsor sets direction  
 **Working repo:** [opiproject/bp-003-ovs-working](https://github.com/opiproject/bp-003-ovs-working) · **Publish target:** `opi-blueprints` registry
 
+## North-star topology (drive everything to this)
+
+![BF3 DPU ASAP² / e-switch topology](docs/architecture/exports/bf3-dpu-asap2-eswitch.png)
+
+Host VFs ↔ Arm **OVS** representors ↔ hardware **E-Switch**. Full read: [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md).  
+**Honesty:** guest stays **stock virtio-net**; VF is HW vDPA on the host — not guest SR-IOV passthrough.
+
 ## Direction (start here)
 
 | Doc | Purpose |
 |-----|---------|
 | [`START_HERE_YASH.md`](START_HERE_YASH.md) | **Intern entry** — ask, constraints, next 3 actions |
+| [`docs/architecture/architecture-1a.md`](docs/architecture/architecture-1a.md) | Topology on the ASAP² diagram |
 | [`docs/GOALS.md`](docs/GOALS.md) | Weekly north star |
 | [`docs/CHARTER.md`](docs/CHARTER.md) | Problem, outcome, v1 vs later |
 | [`docs/NON_GOALS.md`](docs/NON_GOALS.md) | Explicit deferrals |
@@ -22,7 +30,7 @@
 
 ## What this Blueprint is
 
-**OVS hardware offload on NVIDIA BlueField-3** for VM networking:
+**OVS hardware offload on NVIDIA BlueField-3** for VM networking — same picture as the ASAP² diagram above:
 
 1. **Phase 1a — KVM (Ubuntu/Debian lab)** — BF3 DPU mode, OVS-DOCA, guests via DPDK HW vDPA + vhost-user  
 2. **Phase 1b — OpenShift Virtualization** — DPF + accelerated OVN-Kubernetes / KubeVirt (**OPI showcase emphasis**)  
@@ -46,7 +54,7 @@ Second-vendor and other deferrals: [`docs/NON_GOALS.md`](docs/NON_GOALS.md).
 
 | Deliverable | Status |
 |-------------|--------|
-| Reference Architecture Diagram | Gap |
+| Reference Architecture Diagram | ASAP² north-star frozen — `docs/architecture/exports/bf3-dpu-asap2-eswitch.png` |
 | Bill of Materials | Gap |
 | Deployment Guide + IaC | Gap (`artifacts/` empty) |
 | Use Case Narrative | Outline — `docs/use-case-narrative.md` |

@@ -24,9 +24,9 @@ Direction: [`../docs/CHARTER.md`](../docs/CHARTER.md) · [`../docs/ROADMAP.md`](
 
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
-| A1 | 1a topology (host, BF3, OVS-DOCA, vDPA, tenants) | `wip` | `docs/architecture/architecture-1a.md` |
-| A2 | 1b topology (DPF, OVN-K, KubeVirt) | `todo` | per S2 |
-| A3 | SA-readable export (SVG/PNG) + source | `todo` | `docs/architecture/exports/` |
+| A1 | 1a topology (host, BF3, OVS-DOCA, vDPA, tenants) | `done` | ASAP² north-star + `architecture-1a.md` |
+| A2 | 1b topology (DPF, OVN-K, KubeVirt) | `todo` | Same datapath under KubeVirt; per S2 |
+| A3 | SA-readable export (SVG/PNG) + source | `done` | `exports/bf3-dpu-asap2-eswitch.png` |
 
 ### B2 Bill of Materials
 

@@ -3,7 +3,7 @@
 ## Goals (weekly reread)
 
 **Derived from:** [`CHARTER.md`](CHARTER.md) · [`ROADMAP.md`](ROADMAP.md) · [`NON_GOALS.md`](NON_GOALS.md) · **frozen** [`SPONSOR_DECISIONS.md`](SPONSOR_DECISIONS.md)  
-**North-star:** vendor-portable *pattern*; v1 proves it on BF3; **KVM** = low-lift on-ramp.  
+**North-star:** ASAP² Host VF ↔ Arm OVS ↔ E-Switch ([diagram](architecture/exports/bf3-dpu-asap2-eswitch.png)); vendor-portable *pattern*; v1 proves it on BF3; **KVM** = low-lift on-ramp.  
 **Publish bar:** 1a required · 1b should happen (best-effort OK). **Lab:** OPI Lab. **Maintain after intern:** OPI/TSC.  
 **Summit:** mid-Oct 2026 — outline + talkable progress. **LM:** deferred (single BF3). **Vendors:** NVIDIA now; Intel + Marvell targeted; other lab cards = future.
 

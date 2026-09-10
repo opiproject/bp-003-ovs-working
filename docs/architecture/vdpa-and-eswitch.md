@@ -3,6 +3,8 @@
 **For:** Yash · **Mentor:** Josh  
 **Purpose:** Answer “where does vDPA fit?” and “who owns the e-switch?” without mixing this Blueprint with the wrong offload story.
 
+![BF3 DPU ASAP² / e-switch topology](exports/bf3-dpu-asap2-eswitch.png)
+
 ---
 
 ## One-sentence model
@@ -54,7 +56,7 @@ In **DPU mode**, the **DPU (Arm / ECPF)** owns the e-switch — not the x86 host
 - Not the same as **SR-IOV VF passthrough** (guest would bind a VF; different story; **rejected as primary** here).  
 - Not proof of offload by itself — you still need **OVS-DOCA + HW offload evidence** (`docs/validation/offload-proof-contract.md`).
 
-**Memory hook:** *vDPA = how the VM plugs in. OVS-DOCA = how the DPU decides. E-switch = where packets actually go.*
+**Memory hook:** *vDPA = how the VM plugs in. OVS-DOCA = how the DPU decides. E-switch = where packets actually go.* Phase 1a implements the VM path on the diagram above via DPDK HW vDPA (guest stays virtio-net).
 
 ---
 
