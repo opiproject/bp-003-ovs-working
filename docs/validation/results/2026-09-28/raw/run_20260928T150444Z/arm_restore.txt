@@ -1,0 +1,4 @@
+[2026-09-28T15:06:13Z] mode -> tc
+[2026-09-28T15:06:13Z] leaving OVS-DOCA mode
+[2026-09-28T15:06:13Z] restarting openvswitch-switch
+A dependency job for openvswitch-switch.service failed. See 'journalctl -xe' for details.

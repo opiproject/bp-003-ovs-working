@@ -1,0 +1,107 @@
+# Host environment — captured 2026-09-28T16:35:18Z
+
+### OS
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+VERSION_ID="24.04"
+
+### Kernel
+6.8.0-139-generic
+
+### CPU
+CPU(s):                                  64
+Model name:                              INTEL(R) XEON(R) GOLD 6526Y
+Thread(s) per core:                      2
+Core(s) per socket:                      16
+Socket(s):                               2
+CPU(s) scaling MHz:                      24%
+
+### DOCA-Host / OFED
+OFED-internal-26.07-0.7.7:
+doca-all 3.5.0-082000
+doca-apps 
+doca-apps-dev 
+doca-bench 3.5.0098-1
+doca-caps 3.5.0098-1
+doca-comm-channel-admin 3.5.0098-1
+doca-cx-apps 
+doca-cx-apps-dev 
+doca-cx-libs 
+doca-cx-prime-devel 
+doca-cx-prime-dev-tools 
+doca-cx-prime-runtime 
+doca-cx-prime-runtime-tools 
+doca-cx-prime-sdk 
+doca-cx-prime-tools 
+doca-cx-samples 
+doca-devel 3.5.0-082000
+doca-dms 3.5.0098-1
+doca-flow-tune 3.5.0098-1
+doca-gpu 
+doca-grpc 
+doca-libs 
+doca-ofed 3.5.0-082000
+doca-openvswitch-common 3.5.0052-1
+doca-openvswitch-switch 3.5.0052-1
+doca-pcc-counters 3.5.0098-1
+doca-perftest 3.2.5-1
+doca-prime-devel 
+doca-prime-dev-tools 
+doca-prime-runtime 
+doca-prime-runtime-tools 
+doca-prime-tools 
+doca-runtime 3.5.0-082000
+doca-samples 3.5.0098-1
+doca-sdk 
+doca-sdk-aes-gcm 3.5.0098-1
+doca-sdk-apsh 
+doca-sdk-argp 3.5.0098-1
+doca-sdk-comch 3.5.0098-1
+doca-sdk-comm-channel 
+doca-sdk-common 3.5.0098-1
+doca-sdk-compress 3.5.0098-1
+doca-sdk-devemu 3.5.0098-1
+doca-sdk-dma 3.5.0098-1
+doca-sdk-dpa 3.5.0098-1
+doca-sdk-dpdk-bridge 3.5.0098-1
+doca-sdk-erasure-coding 3.5.0098-1
+doca-sdk-eth 3.5.0098-1
+doca-sdk-flow 3.5.0098-1
+doca-sdk-gpunetio 3.5.0098-1
+doca-sdk-mgmt 3.5.0098-1
+doca-sdk-pcc 3.5.0098-1
+doca-sdk-rdma 3.5.0098-1
+doca-sdk-rmax 
+doca-sdk-sha 3.5.0098-1
+doca-sdk-sta 3.5.0098-1
+doca-sdk-telemetry 3.5.0098-1
+doca-sdk-telemetry-exporter 3.5.0098-1
+doca-sdk-urom 3.5.0098-1
+doca-sdk-verbs 3.5.0098-1
+doca-services 
+doca-sha-offload-engine 3.5.0098-1
+doca-socket-relay 3.5.0098-1
+doca-sosreport 4.9.0-8
+doca-spcx-cc 3.5.0098-1
+doca-telemetry-utils 3.5.0098-1
+doca-tools 
+mlnx-ofed-kernel-dkms 2607.0.100-1
+mlnx-ofed-kernel-modules 
+mlnx-ofed-kernel-utils 2607.0.100-1
+
+### mlx5_vdpa module
+mlx5_vdpa dummy kernel module
+
+### QEMU / libvirt
+QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)
+10.0.0
+
+### BlueField PFs
+0d:00.0 Ethernet controller [0200]: Mellanox Technologies MT43244 BlueField-3 integrated ConnectX-7 network controller [15b3:a2dc] (rev 01)
+0d:00.1 Ethernet controller [0200]: Mellanox Technologies MT43244 BlueField-3 integrated ConnectX-7 network controller [15b3:a2dc] (rev 01)
+0d:00.2 DMA controller [0801]: Mellanox Technologies MT43244 BlueField-3 SoC Management Interface [15b3:c2d5] (rev 01)
+enp13s0f0np0: driver=mlx5_core fw=32.50.1002 sriov_numvfs=0
+enp13s0f1np1: driver=mlx5_core fw=32.50.1002 sriov_numvfs=0
+
+### Host eswitch (expect 'not supported' in DPU mode)
+kernel answers: Operation not supported
+kernel answers: Operation not supported

@@ -1,0 +1,31 @@
+[2026-09-28T14:50:13Z] mode -> tc
+[2026-09-28T14:50:13Z] restarting openvswitch-switch
+service        : openvswitch-switch (active)
+hw-offload     : true
+doca-init      : 
+doca_initialized: false
+bridge ovsbr1 datapath_type=""
+    en3f0pf0sf0 type=""
+    p0 type=""
+    pf0hpf type=""
+bridge ovsbr2 datapath_type=""
+    en3f1pf1sf0 type=""
+    p1 type=""
+    pf1hpf type=""
+system@ovs-system: hit:6025893 missed:371301
+  ovsbr1:
+    en3f0pf0sf0 1/2: (system)
+    ovsbr1 65534/1: (internal)
+    p0 2/3: (system)
+    pf0hpf 3/4: (system)
+  offloaded flows: 0
+  offloaded packets: 0.00% (0/0)
+  offloaded bytes: 0.00% (0/0)
+  ovsbr2:
+    en3f1pf1sf0 1/6: (system)
+    ovsbr2 65534/5: (internal)
+    p1 2/7: (system)
+    pf1hpf 3/8: (system)
+  offloaded flows: 0
+  offloaded packets: 0.00% (0/0)
+  offloaded bytes: 0.00% (0/0)

@@ -59,8 +59,8 @@ Direction: [`../docs/CHARTER.md`](../docs/CHARTER.md) · [`../docs/ROADMAP.md`](
 | ID | Item | Status | Notes |
 |----|------|--------|-------|
 | V1 | Offload-proof contract agreed | `done` | accepted 2026-09-09 |
-| V2 | 1a offload evidence | `todo` | |
-| V3 | 1a performance table | `todo` | harness pinned |
+| V2 | 1a offload evidence | `wip` | OVS-DOCA offload proven on Arm/e-switch (2026-09-28); HW vDPA attach (contract item 4) pending: `docs/validation/results/2026-09-28-offload-proof.md` |
+| V3 | 1a performance table | `wip` | sw/tc/doca comparison, macvtap attach: `docs/validation/results/2026-09-28-datapath-comparison.md`; harness `artifacts/scripts/offload-bench/`; redo with HW vDPA |
 | V4 | 1a live migration result | `deferred` | single BF3 — see `docs/validation/limitations.md` |
 | V5 | 1b validation set | `todo` | per S2 |
 

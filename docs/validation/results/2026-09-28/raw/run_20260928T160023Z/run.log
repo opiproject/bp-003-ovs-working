@@ -1,0 +1,7 @@
+[2026-09-28T16:00:23Z] preflight
+[2026-09-28T16:00:26Z] === tc: switching Arm OVS
+[2026-09-28T16:00:36Z] tc: iperf3 60s x 8 streams
+[2026-09-28T16:01:48Z] === doca: switching Arm OVS
+[2026-09-28T16:02:02Z] doca: iperf3 60s x 8 streams
+[2026-09-28T16:03:03Z] restoring Arm to tc
+[2026-09-28T16:03:15Z] report: /opt/opi_experiment/metrics/run_20260928T160023Z/REPORT.md

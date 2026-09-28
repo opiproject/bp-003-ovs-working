@@ -1,0 +1,32 @@
+[2026-09-28T16:03:04Z] mode -> tc
+[2026-09-28T16:03:04Z] leaving OVS-DOCA mode: restoring pre-doca DB snapshot
+[2026-09-28T16:03:05Z] removing stale tap ovsbr1
+[2026-09-28T16:03:05Z] removing stale tap ovsbr2
+[2026-09-28T16:03:10Z] restarting openvswitch-switch
+service        : openvswitch-switch (active)
+hw-offload     : true
+doca-init      : 
+doca_initialized: false
+bridge ovsbr1 datapath_type=""
+    en3f0pf0sf0 type=""
+    p0 type=""
+    pf0hpf type=""
+bridge ovsbr2 datapath_type=""
+    en3f1pf1sf0 type=""
+    p1 type=""
+    pf1hpf type=""
+system@ovs-system: hit:0 missed:0
+  ovsbr1:
+    en3f0pf0sf0 2/2: (system)
+    p0 1/1: (system)
+    pf0hpf 3/3: (system)
+  offloaded flows: 0
+  offloaded packets: 0.00% (0/0)
+  offloaded bytes: 0.00% (0/0)
+  ovsbr2:
+    en3f1pf1sf0 3/6: (system)
+    p1 1/4: (system)
+    pf1hpf 2/5: (system)
+  offloaded flows: 0
+  offloaded packets: 0.00% (0/0)
+  offloaded bytes: 0.00% (0/0)
