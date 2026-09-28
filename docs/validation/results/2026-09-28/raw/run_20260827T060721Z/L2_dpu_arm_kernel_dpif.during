@@ -1,0 +1,11 @@
+system@ovs-system: hit:54191395 missed:2317334
+  ovsbr1:
+    en3f0pf0sf0 3/2: (system)
+    ovsbr1 65534/1: (internal)
+    p0 1/3: (system)
+    pf0hpf 2/4: (system)
+  ovsbr2:
+    en3f1pf1sf0 3/8: (system)
+    ovsbr2 65534/7: (internal)
+    p1 1/5: (system)
+    pf1hpf 2/6: (system)

@@ -1,0 +1,17 @@
+doca@ovs-doca: hit:40 missed:13
+  ovsbr1:
+    en3f0pf0sf0 1/6: (doca: dpdk-devargs=0000:03:00.0,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1,representor=(pf0)sf0, dpdk-lsc-interrupt=false, dpdk-vf-mac=02:28:7d:0d:45:7e, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+    ovsbr1 65534/5: (tap)
+    p0 2/7: (doca: dpdk-devargs=0000:03:00.0,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1, dpdk-lsc-interrupt=false, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+    pf0hpf 3/8: (doca: dpdk-devargs=0000:03:00.0,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1,representor=(pf0)vf65535, dpdk-lsc-interrupt=false, dpdk-vf-mac=ee:65:9d:26:95:46, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+  offloaded flows: 6
+  offloaded packets: 100.00% (71538513/71538520)
+  offloaded bytes: 100.00% (107210759543/107210760108)
+  ovsbr2:
+    en3f1pf1sf0 1/2: (doca: dpdk-devargs=0000:03:00.1,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1,representor=(pf1)sf0, dpdk-lsc-interrupt=false, dpdk-vf-mac=02:b6:bd:51:34:a2, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+    ovsbr2 65534/1: (tap)
+    p1 2/3: (doca: dpdk-devargs=0000:03:00.1,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1, dpdk-lsc-interrupt=false, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+    pf1hpf 3/4: (doca: dpdk-devargs=0000:03:00.1,dv_xmeta_en=4,dv_flow_en=2,probe_opt_en=1,representor=(pf1)vf65535, dpdk-lsc-interrupt=false, dpdk-vf-mac=32:8c:82:0a:74:a5, n_rxq=1, n_rxq_desc=2048, n_txq_desc=2048)
+  offloaded flows: 6
+  offloaded packets: 100.00% (70585705/70585714)
+  offloaded bytes: 100.00% (105782754756/105782755501)

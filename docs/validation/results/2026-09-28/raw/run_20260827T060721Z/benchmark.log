@@ -1,0 +1,42 @@
+
+[36m=== PREFLIGHT ===[0m
+06:07:21 [ INFO] run 20260827T060721Z: 60s x 8 streams
+06:07:21 [[32mOK[0m   ] both guests running
+06:07:23 [[32mOK[0m   ] SSH to both guests works
+06:07:24 [[32mOK[0m   ] SSH to DPU works
+06:07:25 [[32mOK[0m   ] passwordless sudo on DPU confirmed
+06:07:25 [[32mOK[0m   ] mpstat available on both sides
+06:07:26 [[32mOK[0m   ] DPU baseline other_config: {hw-offload="true"}
+06:07:29 [[32mOK[0m   ] iperf3 server listening on opi_vm_b
+
+[36m=== L1_host_software ===[0m
+06:07:29 [ INFO] target 192.168.122.30, CPU sampled on host
+06:07:35 [ INFO] running iperf3 for 60s...
+06:08:36 [[32mOK[0m   ] L1_host_software: 33.01 Gbit/s | host CPU 8.02% | retrans 0 | flows n/a
+06:09:57 [ INFO] waiting 15s for OVS and the data path to settle...
+06:10:13 [[32mOK[0m   ] DPU other_config now: {hw-offload="false"}
+
+[36m=== L2_dpu_arm_kernel ===[0m
+06:10:13 [ INFO] target 10.99.0.11, CPU sampled on dpu
+06:10:19 [ INFO] running iperf3 for 60s...
+06:11:20 [[32mOK[0m   ] L2_dpu_arm_kernel: 0 of 4 test flows marked offloaded:yes
+06:11:20 [[32mOK[0m   ] L2_dpu_arm_kernel: 20.83 Gbit/s | dpu CPU 5.42% | retrans 27604 | flows 0/4
+06:11:32 [ INFO] waiting 15s for OVS and the data path to settle...
+06:11:48 [[32mOK[0m   ] DPU other_config now: {hw-offload="true"}
+
+[36m=== L3_dpu_hw_offload ===[0m
+06:11:48 [ INFO] target 10.99.0.11, CPU sampled on dpu
+06:11:54 [ INFO] running iperf3 for 60s...
+06:13:05 [[32mOK[0m   ] L3_dpu_hw_offload: 4 of 4 test flows marked offloaded:yes
+06:13:05 [[32mOK[0m   ] L3_dpu_hw_offload: 22.67 Gbit/s | dpu CPU 0.29% | retrans 0 | flows 4/4
+
+[36m=== WRITING REPORT ===[0m
+06:13:05 [[32mOK[0m   ] report written
+
+[36m=== RESULTS ===[0m
+level              target          gbps   cpu_busy_pct  retransmits  testflows_offloaded
+L1_host_software   192.168.122.30  33.01  8.02          0            n/a
+L2_dpu_arm_kernel  10.99.0.11      20.83  5.42          27604        0/4
+L3_dpu_hw_offload  10.99.0.11      22.67  0.29          0            4/4
+06:13:05 [[33mWARN[0m ] Restoring DPU OVS configuration...
+06:13:16 [[33mWARN[0m ] DPU other_config now: {hw-offload="true"}   (original: {hw-offload="true"})

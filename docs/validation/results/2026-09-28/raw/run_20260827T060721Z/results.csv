@@ -1,0 +1,4 @@
+level,target,gbps,cpu_busy_pct,retransmits,testflows_offloaded
+L1_host_software,192.168.122.30,33.01,8.02,0,n/a
+L2_dpu_arm_kernel,10.99.0.11,20.83,5.42,27604,0/4
+L3_dpu_hw_offload,10.99.0.11,22.67,0.29,0,4/4

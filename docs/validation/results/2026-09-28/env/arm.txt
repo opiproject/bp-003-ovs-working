@@ -1,0 +1,94 @@
+# BF3 Arm environment — Arm clock is not trusted; see host.txt for capture time
+
+### OS
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+VERSION_ID="24.04"
+
+### Kernel
+6.8.0-1030-bluefield-64k
+
+### Cores
+16
+
+### BFB / DOCA
+--/dev/mmcblk0boot0
+BlueField ATF version: v2.2(release):4.16.0-8-gda930bca9
+BlueField UEFI version: 4.16.0-48-g3e1cb60aa0
+BlueField BSP version: 4.16.0.14075
+
+OS Release Version: bf-bundle-3.5.0-89_26.07_ubuntu-24.04_64k_prod
+bf-bundle-3.5.0-89_26.07_ubuntu-24.04_64k_prod
+doca-apps 
+doca-apps-dev 
+doca-apsh-config 3.5.0098-1
+doca-bench 3.5.0098-1
+doca-caps 3.5.0098-1
+doca-comm-channel-admin 3.5.0098-1
+doca-cx-apps 
+doca-cx-apps-dev 
+doca-cx-libs 
+doca-cx-prime-dev-tools 
+doca-cx-prime-devel 
+doca-cx-prime-runtime 
+doca-cx-prime-runtime-tools 
+doca-cx-prime-sdk 
+doca-cx-prime-tools 
+doca-cx-samples 
+doca-devel 1-3.5.0098-1.26.07.0.7.7.bf.4.16.0.14075
+doca-devel-container 1-3.5.0098-1.26.07.0.7.7.bf.4.16.0.14075
+doca-devel-kernel 1-3.5.0098-1.26.07.0.7.7.bf.4.16.0.14075
+doca-devel-user 1-3.5.0098-1.26.07.0.7.7.bf.4.16.0.14075
+doca-dms 3.5.0098-1
+doca-eula 1.0.0-2
+doca-flow-tune 3.5.0098-1
+doca-gpu 
+doca-grpc 
+doca-libopenvswitch 
+doca-libopenvswitch-dev 
+doca-libs 
+doca-openvswitch-common 3.5.0052-1
+doca-openvswitch-dev 3.5.0052-1
+doca-openvswitch-ipsec 3.5.0052-1
+doca-openvswitch-switch 3.5.0052-1
+doca-pcc-counters 3.5.0098-1
+doca-perftest 3.2.5-1
+doca-prime-dev-tools 
+doca-prime-devel 
+doca-prime-runtime 
+doca-prime-runtime-tools 
+doca-prime-tools 
+doca-runtime 1-3.5.0098-1.26.07.0.7.7.bf.4.16.0.14075
+
+### OVS
+ovs-vswitchd (Open vSwitch) 3.5.0052
+
+### OVS other_config
+{hw-offload="true"}
+
+### OVS doca/dpdk
+doca_initialized    : false
+doca_version        : "3.5.0098"
+dpdk_initialized    : false
+dpdk_version        : "DPDK 26.03.0"
+
+### Uplink firmware
+p0: driver: mlx5_core firmware-version: 32.50.1002 (MT_0000000884) 
+p1: driver: mlx5_core firmware-version: 32.50.1002 (MT_0000000884) 
+
+### Eswitch mode
+pci/0000:03:00.0: kernel answers: Operation not permitted
+auxiliary/mlx5_core.eth.0: kernel answers: Operation not permitted
+pci/0000:03:00.1: kernel answers: Operation not permitted
+auxiliary/mlx5_core.eth.1: kernel answers: Operation not permitted
+auxiliary/mlx5_core.sf.2: kernel answers: Operation not permitted
+auxiliary/mlx5_core.eth.2: kernel answers: Operation not permitted
+auxiliary/mlx5_core.sf.3: kernel answers: Operation not permitted
+auxiliary/mlx5_core.eth.3: kernel answers: Operation not permitted
+
+### Representors
+p0               UP             9c:63:c0:e4:b7:e0 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+p1               UP             9c:63:c0:e4:b7:e1 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+pf0hpf           UP             ee:65:9d:26:95:46 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+pf1hpf           UP             32:8c:82:0a:74:a5 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+en3f0pf0sf0      UP             ae:46:63:43:b0:f3 <BROADCAST,MULTICAST,UP,LOWER_UP> 
+en3f1pf1sf0      UP             8a:97:09:82:7d:8c <BROADCAST,MULTICAST,UP,LOWER_UP> 

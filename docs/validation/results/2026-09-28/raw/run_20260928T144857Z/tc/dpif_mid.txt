@@ -1,0 +1,17 @@
+system@ovs-system: hit:6025929 missed:371321
+  ovsbr1:
+    en3f0pf0sf0 1/2: (system)
+    ovsbr1 65534/1: (internal)
+    p0 2/3: (system)
+    pf0hpf 3/4: (system)
+  offloaded flows: 10
+  offloaded packets: 100.00% (69086829/69086857)
+  offloaded bytes: 100.00% (103560851763/103560855678)
+  ovsbr2:
+    en3f1pf1sf0 1/6: (system)
+    ovsbr2 65534/5: (internal)
+    p1 2/7: (system)
+    pf1hpf 3/8: (system)
+  offloaded flows: 10
+  offloaded packets: 100.00% (70944447/70944475)
+  offloaded bytes: 100.00% (106346077439/106346081356)

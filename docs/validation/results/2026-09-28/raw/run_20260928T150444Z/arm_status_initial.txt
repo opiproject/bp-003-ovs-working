@@ -1,0 +1,29 @@
+service        : openvswitch-switch (active)
+hw-offload     : true
+doca-init      : 
+doca_initialized: false
+bridge ovsbr1 datapath_type=""
+    en3f0pf0sf0 type=""
+    p0 type=""
+    pf0hpf type=""
+bridge ovsbr2 datapath_type=""
+    en3f1pf1sf0 type=""
+    p1 type=""
+    pf1hpf type=""
+system@ovs-system: hit:6026743 missed:371557
+  ovsbr1:
+    en3f0pf0sf0 1/2: (system)
+    ovsbr1 65534/1: (internal)
+    p0 2/3: (system)
+    pf0hpf 3/4: (system)
+  offloaded flows: 0
+  offloaded packets: 0.42% (2/479)
+  offloaded bytes: 0.18% (120/65277)
+  ovsbr2:
+    en3f1pf1sf0 1/6: (system)
+    ovsbr2 65534/5: (internal)
+    p1 2/7: (system)
+    pf1hpf 3/8: (system)
+  offloaded flows: 0
+  offloaded packets: 0.81% (4/495)
+  offloaded bytes: 0.36% (240/66860)
