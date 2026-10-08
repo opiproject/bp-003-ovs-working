@@ -1,5 +1,7 @@
 # Datapath comparison — software vs TC offload vs OVS-DOCA on BF3
 
+> ⚠️ **Numbers under revision.** Throughput figures in this document were read from iperf3 `sum_received`, which overstated test duration in 4 of 9 runs (esnet/iperf#836). Sender-side totals show TC and OVS-DOCA at parity (28.1 vs 28.8 Gbit/s, ranges overlap). The +13.5 % comparison does not hold. Offload evidence (flows, `%soft`, retransmits) is unaffected. Tracked in #2.
+
 **Date:** 2026-09-28 (host UTC) · **Author:** Yash Singh · **Lab:** OPI Lab, host dh5 + BlueField-3 (DPU mode), DOCA 3.5
 **Question:** On the same card, topology and traffic, how do the three Arm-side OVS datapaths compare, and does the Blueprint's locked path (OVS-DOCA) hold up against TC offload?
 **Harness:** [`artifacts/scripts/offload-bench/`](../../../artifacts/scripts/offload-bench/) · **Raw data:** [`2026-09-28/raw/`](2026-09-28/raw/) · **Offload evidence:** [`2026-09-28-offload-proof.md`](2026-09-28-offload-proof.md)
