@@ -1,0 +1,3 @@
+[2026-11-09T12:10:07Z] round 1: switching Arm to tc
+[2026-11-09T12:14:07Z] tc round 1 done: fixed_gbps=10.0 fixed_host_kernel=0.2 fixed_vhost=0.0 fixed_arm=0.12 rr_idle_p50_us=22.0 rr_load_p99_us=136.0 crr_tps=10107.68 pps64_rx_M=3.812 pps1500_rx_M=3.387
+[2026-11-09T12:14:09Z] finished; Arm restored to tc; results in /home/opi/bench/results/suite_20261109T121006Z

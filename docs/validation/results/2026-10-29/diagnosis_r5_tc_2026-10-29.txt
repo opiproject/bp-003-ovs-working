@@ -1,0 +1,67 @@
+opi@dh5:~/bench$ # On host dh5, as opi, any directory
+R=$(ls -d ~/bench/results/bulk_* | tail -1); D=$R/r5_tc
+grep -E '^Average:.*vhost' $D/host_pidstat.txt
+grep -E '^Average: +(CPU|12|22|24) ' $D/host_mpstat.txt
+grep '^Average:' $D/vm2_mpstat.txt
+for t in before after; do echo "== vm1 $t"; grep -E 'TcpRetransSegs|TCPDSACKRecv|TCPSpuriousRetrans|Reorder|TCPLossProbes|TCPTimeouts' $D/vm1_$t.txt; done
+grep -iE 'queue|drop' $D/vm2_after.txt | head -20
+Average:    64055         -     62011    0.00   77.53    0.00    0.02   77.53     -  |__vhost-62003
+Average:    64055         -     62078    0.00   98.92    0.00    0.87   98.92     -  |__vhost-62070
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:      12    0.02    0.00   37.08    0.00    0.00    0.00    0.00   62.65    0.00    0.25
+Average:      22    0.02    0.00   98.78    0.00    0.00    0.93    0.00    0.00    0.00    0.27
+Average:      24    0.02    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00   99.98
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:     all    0.56    0.00   10.62    0.00    0.00   14.37    0.47    0.00    0.00   73.97
+Average:       0    0.46    0.00    8.35    0.00    0.00    9.08    0.00    0.00    0.00   82.11
+Average:       1    0.56    0.00   10.13    0.00    0.00   48.11    0.00    0.00    0.00   41.20
+Average:       2    0.65    0.00   13.49    0.00    0.00    1.84    0.00    0.00    0.00   84.02
+Average:       3    0.58    0.00   10.75    0.02    0.00    0.40    1.89    0.00    0.00   86.37
+== vm1 before
+TcpRetransSegs                  2505056            0.0
+TcpExtTCPSACKReorder            0                  0.0
+TcpExtTCPRenoReorder            0                  0.0
+TcpExtTCPTSReorder              0                  0.0
+TcpExtTCPTimeouts               1117               0.0
+TcpExtTCPLossProbes             9932               0.0
+TcpExtTCPDSACKRecv              10                 0.0
+TcpExtTCPDSACKRecvSegs          74                 0.0
+== vm1 after
+TcpRetransSegs                  2509123            0.0
+TcpExtTCPSACKReorder            0                  0.0
+TcpExtTCPRenoReorder            0                  0.0
+TcpExtTCPTSReorder              0                  0.0
+TcpExtTCPTimeouts               1117               0.0
+TcpExtTCPLossProbes             9932               0.0
+TcpExtTCPDSACKRecv              10                 0.0
+TcpExtTCPDSACKRecvSegs          74                 0.0
+TcpExtLockDroppedIcmps          0                  0.0
+TcpExtListenDrops               0                  0.0
+TcpExtTCPBacklogDrop            0                  0.0
+TcpExtPFMemallocDrop            0                  0.0
+TcpExtTCPMinTTLDrop             0                  0.0
+TcpExtTCPDeferAcceptDrop        0                  0.0
+TcpExtTCPReqQFullDrop           0                  0.0
+TcpExtTCPOFOQueue               382431             0.0
+TcpExtTCPOFODrop                0                  0.0
+TcpExtTCPSpuriousRtxHostQueues  0                  0.0
+TcpExtTCPZeroWindowDrop         0                  0.0
+TcpExtTCPRcvQDrop               0                  0.0
+TcpExtTCPWqueueTooBig           0                  0.0
+TcpExtTCPAODroppedIcmps         0                  0.0
+MPTcpExtOFOQueueTail            0                  0.0
+MPTcpExtOFOQueue                0                  0.0
+MPTcpExtAddAddrTxDrop           0                  0.0
+MPTcpExtEchoAddTxDrop           0                  0.0
+MPTcpExtAddAddrDrop             0                  0.0
+MPTcpExtRmAddrDrop              0                  0.0
+opi@dh5:~/bench$ cd ~/bench
+opi@dh5:~/bench$ # On host dh5, as opi, in ~/bench
+sed -i 's/^DROPISH = .*/DROPISH = re.compile(r"drop|discard|err|miss|overflow|prune|collapse", re.I); BENIGN = re.compile(r"pp_recycle|Coalesce", re.I)/' summarize.py
+sed -i 's/if dv > 0 and DROPISH.search(k):/if dv > 0 and DROPISH.search(k) and not BENIGN.search(k):/' summarize.py
+python3 summarize.py "$R" | tail -4
+
+doca  n=5  Gbit/s median 30.27  range 29.81-30.96  retransmits median 5356
+sw    n=5  Gbit/s median 12.53  range 12.38-12.62  retransmits median 492339
+tc    n=5  Gbit/s median 30.72  range 30.22-31.15  retransmits median 4067
+opi@dh5:~/bench$ 

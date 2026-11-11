@@ -1,0 +1,31 @@
+[2026-11-09T11:35:40Z] round 1: switching Arm to sw
+[2026-11-09T11:36:56Z] sw done: 14.10 Gbit/s sent, 671526 retransmits
+[2026-11-09T11:36:56Z] round 1: switching Arm to tc
+[2026-11-09T11:38:10Z] tc done: 93.43 Gbit/s sent, 308141 retransmits
+[2026-11-09T11:38:10Z] round 1: switching Arm to doca
+[2026-11-09T11:39:29Z] doca done: 93.40 Gbit/s sent, 688682 retransmits
+[2026-11-09T11:39:29Z] round 2: switching Arm to doca
+[2026-11-09T11:40:58Z] doca done: 93.41 Gbit/s sent, 215539 retransmits
+[2026-11-09T11:40:58Z] round 2: switching Arm to tc
+[2026-11-09T11:42:17Z] tc done: 94.04 Gbit/s sent, 131738 retransmits
+[2026-11-09T11:42:17Z] round 2: switching Arm to sw
+[2026-11-09T11:43:32Z] sw done: 13.98 Gbit/s sent, 667852 retransmits
+[2026-11-09T11:43:32Z] round 3: switching Arm to sw
+[2026-11-09T11:44:46Z] sw done: 14.06 Gbit/s sent, 640791 retransmits
+[2026-11-09T11:44:46Z] round 3: switching Arm to tc
+[2026-11-09T11:46:00Z] tc done: 93.95 Gbit/s sent, 257796 retransmits
+[2026-11-09T11:46:00Z] round 3: switching Arm to doca
+[2026-11-09T11:47:19Z] doca done: 93.83 Gbit/s sent, 310422 retransmits
+[2026-11-09T11:47:19Z] round 4: switching Arm to doca
+[2026-11-09T11:48:48Z] doca done: 93.56 Gbit/s sent, 314013 retransmits
+[2026-11-09T11:48:48Z] round 4: switching Arm to tc
+[2026-11-09T11:50:07Z] tc done: 93.06 Gbit/s sent, 164302 retransmits
+[2026-11-09T11:50:07Z] round 4: switching Arm to sw
+[2026-11-09T11:51:22Z] sw done: 14.03 Gbit/s sent, 676336 retransmits
+[2026-11-09T11:51:22Z] round 5: switching Arm to sw
+[2026-11-09T11:52:36Z] sw done: 14.30 Gbit/s sent, 688552 retransmits
+[2026-11-09T11:52:36Z] round 5: switching Arm to tc
+[2026-11-09T11:53:50Z] tc done: 93.61 Gbit/s sent, 293921 retransmits
+[2026-11-09T11:53:50Z] round 5: switching Arm to doca
+[2026-11-09T11:55:09Z] doca done: 93.33 Gbit/s sent, 232081 retransmits
+[2026-11-09T11:55:16Z] finished; Arm restored to tc; results in /home/opi/bench/results/bulk_20261109T113540Z

@@ -75,7 +75,7 @@ for m in modes:
     d = os.path.join(run, m); r = {"mode": m}
     try:
         j = json.load(open(os.path.join(d, "iperf.json")))
-        r["gbps"] = j["end"]["sum_received"]["bits_per_second"] / 1e9
+        r["gbps"] = j["end"]["sum_sent"]["bits_per_second"] / 1e9
         r["retx"] = j["end"]["sum_sent"].get("retransmits", "n/a")
     except Exception as e:
         r["gbps"], r["retx"] = None, f"parse error: {e}"
