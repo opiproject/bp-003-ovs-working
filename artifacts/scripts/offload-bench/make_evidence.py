@@ -70,7 +70,7 @@ def main(root):
                          read(os.path.join(d, "offload_stats_mid.txt")), 30)
             try:
                 j = json.load(open(os.path.join(d, "iperf.json")))
-                rx = j["end"]["sum_received"]["bits_per_second"] / 1e9
+                rx = j["end"]["sum_sent"]["bits_per_second"] / 1e9
                 rt = j["end"]["sum_sent"].get("retransmits")
                 n = len(j["start"].get("connected", []))
                 dur = j["start"]["test_start"].get("duration")

@@ -1,0 +1,19 @@
+[2026-11-09T12:17:15Z] round 1: switching Arm to sw
+[2026-11-09T12:21:15Z] sw round 1 done: fixed_gbps=10.0 fixed_host_kernel=2.66 fixed_vhost=0.0 fixed_arm=0.68 rr_idle_p50_us=46.0 rr_load_p99_us=201406.0 crr_tps=5224.67 pps64_rx_M=0.737 pps1500_rx_M=0.735
+[2026-11-09T12:21:15Z] round 1: switching Arm to tc
+[2026-11-09T12:25:14Z] tc round 1 done: fixed_gbps=10.0 fixed_host_kernel=0.06 fixed_vhost=0.0 fixed_arm=0.07 rr_idle_p50_us=23.0 rr_load_p99_us=135.0 crr_tps=10977.98 pps64_rx_M=3.823 pps1500_rx_M=3.392
+[2026-11-09T12:25:14Z] round 1: switching Arm to doca
+[2026-11-09T12:29:16Z] doca round 1 done: fixed_gbps=10.0 fixed_host_kernel=0.08 fixed_vhost=0.0 fixed_arm=1.14 rr_idle_p50_us=23.0 rr_load_p99_us=126.0 crr_tps=11082.53 pps64_rx_M=3.82 pps1500_rx_M=3.39
+[2026-11-09T12:29:16Z] round 2: switching Arm to doca
+[2026-11-09T12:33:29Z] doca round 2 done: fixed_gbps=10.0 fixed_host_kernel=0.06 fixed_vhost=0.0 fixed_arm=1.15 rr_idle_p50_us=22.0 rr_load_p99_us=124.0 crr_tps=11061.89 pps64_rx_M=3.827 pps1500_rx_M=3.395
+[2026-11-09T12:33:29Z] round 2: switching Arm to tc
+[2026-11-09T12:37:33Z] tc round 2 done: fixed_gbps=10.0 fixed_host_kernel=0.04 fixed_vhost=0.0 fixed_arm=0.18 rr_idle_p50_us=23.0 rr_load_p99_us=137.0 crr_tps=10802.08 pps64_rx_M=3.844 pps1500_rx_M=3.417
+[2026-11-09T12:37:33Z] round 2: switching Arm to sw
+[2026-11-09T12:41:31Z] sw round 2 done: fixed_gbps=9.82 fixed_host_kernel=2.7 fixed_vhost=0.0 fixed_arm=0.61 rr_idle_p50_us=49.0 rr_load_p99_us=202812.0 crr_tps=4856.55 pps64_rx_M=0.757 pps1500_rx_M=0.751
+[2026-11-09T12:41:31Z] round 3: switching Arm to sw
+[2026-11-09T12:45:30Z] sw round 3 done: fixed_gbps=10.0 fixed_host_kernel=2.51 fixed_vhost=0.0 fixed_arm=0.64 rr_idle_p50_us=47.0 rr_load_p99_us=505.0 crr_tps=5311.76 pps64_rx_M=0.754 pps1500_rx_M=0.747
+[2026-11-09T12:45:30Z] round 3: switching Arm to tc
+[2026-11-09T12:49:29Z] tc round 3 done: fixed_gbps=10.0 fixed_host_kernel=0.29 fixed_vhost=0.0 fixed_arm=0.13 rr_idle_p50_us=24.0 rr_load_p99_us=130.0 crr_tps=11244.16 pps64_rx_M=3.824 pps1500_rx_M=3.38
+[2026-11-09T12:49:29Z] round 3: switching Arm to doca
+[2026-11-09T12:53:31Z] doca round 3 done: fixed_gbps=10.0 fixed_host_kernel=0.1 fixed_vhost=0.0 fixed_arm=1.19 rr_idle_p50_us=22.0 rr_load_p99_us=124.0 crr_tps=10192.17 pps64_rx_M=3.731 pps1500_rx_M=3.387
+[2026-11-09T12:53:37Z] finished; Arm restored to tc; results in /home/opi/bench/results/suite_20261109T121713Z

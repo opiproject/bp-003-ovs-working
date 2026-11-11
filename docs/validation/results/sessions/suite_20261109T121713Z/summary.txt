@@ -1,0 +1,99 @@
+{"run": "r1_doca", "mode": "doca", "fixed_gbps": 10.0, "fixed_retx": 2302, "fixed_host_kernel": 0.08, "fixed_host_guest": 4.04, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.0, "fixed_arm": 1.14, "rr_idle_tps": 43377.42, "rr_idle_p50_us": 23.0, "rr_idle_p99_us": 29.0, "rr_load_tps": 28702.37, "rr_load_p50_us": 23.0, "rr_load_p99_us": 126.0, "crr_tps": 11082.53, "crr_arm": 1.22, "pps64_tx_M": 82.28, "pps64_rx_M": 3.82, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.29, "pps512_tx_M": 23.496, "pps512_rx_M": 3.495, "pps512_rxdrop_M": 0.0, "pps512_arm": 1.05, "pps1500_tx_M": 8.225, "pps1500_rx_M": 3.39, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 1.05}
+{"run": "r1_sw", "mode": "sw", "fixed_gbps": 10.0, "fixed_retx": 624342, "fixed_host_kernel": 2.66, "fixed_host_guest": 4.7, "fixed_vhost": 0.0, "fixed_vm1": 3.95, "fixed_vm2": 0.56, "fixed_arm": 0.68, "rr_idle_tps": 21286.94, "rr_idle_p50_us": 46.0, "rr_idle_p99_us": 58.0, "rr_load_tps": 380.09, "rr_load_p50_us": 171.0, "rr_load_p99_us": 201406.0, "crr_tps": 5224.67, "crr_arm": 0.2, "pps64_tx_M": 69.637, "pps64_rx_M": 0.737, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.76, "pps512_tx_M": 73.966, "pps512_rx_M": 0.74, "pps512_rxdrop_M": 0.0, "pps512_arm": 2.3, "pps1500_tx_M": 31.101, "pps1500_rx_M": 0.735, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 2.49}
+{"run": "r1_tc", "mode": "tc", "fixed_gbps": 10.0, "fixed_retx": 2000, "fixed_host_kernel": 0.06, "fixed_host_guest": 5.25, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.7, "fixed_arm": 0.07, "rr_idle_tps": 43569.86, "rr_idle_p50_us": 23.0, "rr_idle_p99_us": 29.0, "rr_load_tps": 25276.81, "rr_load_p50_us": 26.0, "rr_load_p99_us": 135.0, "crr_tps": 10977.98, "crr_arm": 0.05, "pps64_tx_M": 81.736, "pps64_rx_M": 3.823, "pps64_rxdrop_M": 0.0, "pps64_arm": 0.2, "pps512_tx_M": 23.496, "pps512_rx_M": 3.488, "pps512_rxdrop_M": 0.0, "pps512_arm": 0.04, "pps1500_tx_M": 8.224, "pps1500_rx_M": 3.392, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 0.28}
+{"run": "r2_doca", "mode": "doca", "fixed_gbps": 10.0, "fixed_retx": 3655, "fixed_host_kernel": 0.06, "fixed_host_guest": 4.67, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.06, "fixed_arm": 1.15, "rr_idle_tps": 43719.43, "rr_idle_p50_us": 22.0, "rr_idle_p99_us": 29.0, "rr_load_tps": 27767.08, "rr_load_p50_us": 24.0, "rr_load_p99_us": 124.0, "crr_tps": 11061.89, "crr_arm": 1.22, "pps64_tx_M": 82.936, "pps64_rx_M": 3.827, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.28, "pps512_tx_M": 23.493, "pps512_rx_M": 3.472, "pps512_rxdrop_M": 0.0, "pps512_arm": 1.09, "pps1500_tx_M": 8.224, "pps1500_rx_M": 3.395, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 1.06}
+{"run": "r2_sw", "mode": "sw", "fixed_gbps": 9.82, "fixed_retx": 513464, "fixed_host_kernel": 2.7, "fixed_host_guest": 4.26, "fixed_vhost": 0.0, "fixed_vm1": 3.4, "fixed_vm2": 0.86, "fixed_arm": 0.61, "rr_idle_tps": 20224.39, "rr_idle_p50_us": 49.0, "rr_idle_p99_us": 57.0, "rr_load_tps": 321.89, "rr_load_p50_us": 168.0, "rr_load_p99_us": 202812.0, "crr_tps": 4856.55, "crr_arm": 0.18, "pps64_tx_M": 69.996, "pps64_rx_M": 0.757, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.8, "pps512_tx_M": 74.284, "pps512_rx_M": 0.75, "pps512_rxdrop_M": 0.0, "pps512_arm": 2.32, "pps1500_tx_M": 31.08, "pps1500_rx_M": 0.751, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 2.54}
+{"run": "r2_tc", "mode": "tc", "fixed_gbps": 10.0, "fixed_retx": 5409, "fixed_host_kernel": 0.04, "fixed_host_guest": 4.03, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.0, "fixed_arm": 0.18, "rr_idle_tps": 42805.93, "rr_idle_p50_us": 23.0, "rr_idle_p99_us": 30.0, "rr_load_tps": 27062.0, "rr_load_p50_us": 26.0, "rr_load_p99_us": 137.0, "crr_tps": 10802.08, "crr_arm": 0.2, "pps64_tx_M": 83.152, "pps64_rx_M": 3.844, "pps64_rxdrop_M": 0.0, "pps64_arm": 0.04, "pps512_tx_M": 23.496, "pps512_rx_M": 3.481, "pps512_rxdrop_M": 0.0, "pps512_arm": 0.27, "pps1500_tx_M": 8.224, "pps1500_rx_M": 3.417, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 0.04}
+{"run": "r3_doca", "mode": "doca", "fixed_gbps": 10.0, "fixed_retx": 11754, "fixed_host_kernel": 0.1, "fixed_host_guest": 4.04, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.0, "fixed_arm": 1.19, "rr_idle_tps": 44532.57, "rr_idle_p50_us": 22.0, "rr_idle_p99_us": 28.0, "rr_load_tps": 27579.97, "rr_load_p50_us": 25.0, "rr_load_p99_us": 124.0, "crr_tps": 10192.17, "crr_arm": 1.19, "pps64_tx_M": 80.286, "pps64_rx_M": 3.731, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.05, "pps512_tx_M": 23.496, "pps512_rx_M": 3.498, "pps512_rxdrop_M": 0.0, "pps512_arm": 1.27, "pps1500_tx_M": 8.222, "pps1500_rx_M": 3.387, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 1.05}
+{"run": "r3_sw", "mode": "sw", "fixed_gbps": 10.0, "fixed_retx": 598200, "fixed_host_kernel": 2.51, "fixed_host_guest": 4.69, "fixed_vhost": 0.0, "fixed_vm1": 3.92, "fixed_vm2": 0.8, "fixed_arm": 0.64, "rr_idle_tps": 20697.68, "rr_idle_p50_us": 47.0, "rr_idle_p99_us": 62.0, "rr_load_tps": 561.99, "rr_load_p50_us": 153.0, "rr_load_p99_us": 505.0, "crr_tps": 5311.76, "crr_arm": 0.2, "pps64_tx_M": 69.647, "pps64_rx_M": 0.754, "pps64_rxdrop_M": 0.0, "pps64_arm": 1.99, "pps512_tx_M": 74.44, "pps512_rx_M": 0.751, "pps512_rxdrop_M": 0.0, "pps512_arm": 2.31, "pps1500_tx_M": 31.078, "pps1500_rx_M": 0.747, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 2.5}
+{"run": "r3_tc", "mode": "tc", "fixed_gbps": 10.0, "fixed_retx": 4878, "fixed_host_kernel": 0.29, "fixed_host_guest": 4.88, "fixed_vhost": 0.0, "fixed_vm1": 4.0, "fixed_vm2": 0.95, "fixed_arm": 0.13, "rr_idle_tps": 40685.18, "rr_idle_p50_us": 24.0, "rr_idle_p99_us": 32.0, "rr_load_tps": 26777.27, "rr_load_p50_us": 25.0, "rr_load_p99_us": 130.0, "crr_tps": 11244.16, "crr_arm": 0.2, "pps64_tx_M": 81.367, "pps64_rx_M": 3.824, "pps64_rxdrop_M": 0.0, "pps64_arm": 0.22, "pps512_tx_M": 23.496, "pps512_rx_M": 3.498, "pps512_rxdrop_M": 0.0, "pps512_arm": 0.05, "pps1500_tx_M": 8.224, "pps1500_rx_M": 3.38, "pps1500_rxdrop_M": 0.0, "pps1500_arm": 0.04}
+
+== doca
+  fixed_gbps           n=3  median 10.0       range 10.0 - 10.0
+  fixed_retx           n=3  median 3655       range 2302 - 11754
+  fixed_host_kernel    n=3  median 0.08       range 0.06 - 0.1
+  fixed_host_guest     n=3  median 4.04       range 4.04 - 4.67
+  fixed_vhost          n=3  median 0.0        range 0.0 - 0.0
+  fixed_vm1            n=3  median 4.0        range 4.0 - 4.0
+  fixed_vm2            n=3  median 0.0        range 0.0 - 0.06
+  fixed_arm            n=3  median 1.15       range 1.14 - 1.19
+  rr_idle_tps          n=3  median 43719.43   range 43377.42 - 44532.57
+  rr_idle_p50_us       n=3  median 22.0       range 22.0 - 23.0
+  rr_idle_p99_us       n=3  median 29.0       range 28.0 - 29.0
+  rr_load_tps          n=3  median 27767.08   range 27579.97 - 28702.37
+  rr_load_p50_us       n=3  median 24.0       range 23.0 - 25.0
+  rr_load_p99_us       n=3  median 124.0      range 124.0 - 126.0
+  crr_tps              n=3  median 11061.89   range 10192.17 - 11082.53
+  crr_arm              n=3  median 1.22       range 1.19 - 1.22
+  pps64_tx_M           n=3  median 82.28      range 80.286 - 82.936
+  pps64_rx_M           n=3  median 3.82       range 3.731 - 3.827
+  pps64_rxdrop_M       n=3  median 0.0        range 0.0 - 0.0
+  pps64_arm            n=3  median 1.28       range 1.05 - 1.29
+  pps512_tx_M          n=3  median 23.496     range 23.493 - 23.496
+  pps512_rx_M          n=3  median 3.495      range 3.472 - 3.498
+  pps512_rxdrop_M      n=3  median 0.0        range 0.0 - 0.0
+  pps512_arm           n=3  median 1.09       range 1.05 - 1.27
+  pps1500_tx_M         n=3  median 8.224      range 8.222 - 8.225
+  pps1500_rx_M         n=3  median 3.39       range 3.387 - 3.395
+  pps1500_rxdrop_M     n=3  median 0.0        range 0.0 - 0.0
+  pps1500_arm          n=3  median 1.05       range 1.05 - 1.06
+
+== sw
+  fixed_gbps           n=3  median 10.0       range 9.82 - 10.0
+  fixed_retx           n=3  median 598200     range 513464 - 624342
+  fixed_host_kernel    n=3  median 2.66       range 2.51 - 2.7
+  fixed_host_guest     n=3  median 4.69       range 4.26 - 4.7
+  fixed_vhost          n=3  median 0.0        range 0.0 - 0.0
+  fixed_vm1            n=3  median 3.92       range 3.4 - 3.95
+  fixed_vm2            n=3  median 0.8        range 0.56 - 0.86
+  fixed_arm            n=3  median 0.64       range 0.61 - 0.68
+  rr_idle_tps          n=3  median 20697.68   range 20224.39 - 21286.94
+  rr_idle_p50_us       n=3  median 47.0       range 46.0 - 49.0
+  rr_idle_p99_us       n=3  median 58.0       range 57.0 - 62.0
+  rr_load_tps          n=3  median 380.09     range 321.89 - 561.99
+  rr_load_p50_us       n=3  median 168.0      range 153.0 - 171.0
+  rr_load_p99_us       n=3  median 201406.0   range 505.0 - 202812.0
+  crr_tps              n=3  median 5224.67    range 4856.55 - 5311.76
+  crr_arm              n=3  median 0.2        range 0.18 - 0.2
+  pps64_tx_M           n=3  median 69.647     range 69.637 - 69.996
+  pps64_rx_M           n=3  median 0.754      range 0.737 - 0.757
+  pps64_rxdrop_M       n=3  median 0.0        range 0.0 - 0.0
+  pps64_arm            n=3  median 1.8        range 1.76 - 1.99
+  pps512_tx_M          n=3  median 74.284     range 73.966 - 74.44
+  pps512_rx_M          n=3  median 0.75       range 0.74 - 0.751
+  pps512_rxdrop_M      n=3  median 0.0        range 0.0 - 0.0
+  pps512_arm           n=3  median 2.31       range 2.3 - 2.32
+  pps1500_tx_M         n=3  median 31.08      range 31.078 - 31.101
+  pps1500_rx_M         n=3  median 0.747      range 0.735 - 0.751
+  pps1500_rxdrop_M     n=3  median 0.0        range 0.0 - 0.0
+  pps1500_arm          n=3  median 2.5        range 2.49 - 2.54
+
+== tc
+  fixed_gbps           n=3  median 10.0       range 10.0 - 10.0
+  fixed_retx           n=3  median 4878       range 2000 - 5409
+  fixed_host_kernel    n=3  median 0.06       range 0.04 - 0.29
+  fixed_host_guest     n=3  median 4.88       range 4.03 - 5.25
+  fixed_vhost          n=3  median 0.0        range 0.0 - 0.0
+  fixed_vm1            n=3  median 4.0        range 4.0 - 4.0
+  fixed_vm2            n=3  median 0.7        range 0.0 - 0.95
+  fixed_arm            n=3  median 0.13       range 0.07 - 0.18
+  rr_idle_tps          n=3  median 42805.93   range 40685.18 - 43569.86
+  rr_idle_p50_us       n=3  median 23.0       range 23.0 - 24.0
+  rr_idle_p99_us       n=3  median 30.0       range 29.0 - 32.0
+  rr_load_tps          n=3  median 26777.27   range 25276.81 - 27062.0
+  rr_load_p50_us       n=3  median 26.0       range 25.0 - 26.0
+  rr_load_p99_us       n=3  median 135.0      range 130.0 - 137.0
+  crr_tps              n=3  median 10977.98   range 10802.08 - 11244.16
+  crr_arm              n=3  median 0.2        range 0.05 - 0.2
+  pps64_tx_M           n=3  median 81.736     range 81.367 - 83.152
+  pps64_rx_M           n=3  median 3.824      range 3.823 - 3.844
+  pps64_rxdrop_M       n=3  median 0.0        range 0.0 - 0.0
+  pps64_arm            n=3  median 0.2        range 0.04 - 0.22
+  pps512_tx_M          n=3  median 23.496     range 23.496 - 23.496
+  pps512_rx_M          n=3  median 3.488      range 3.481 - 3.498
+  pps512_rxdrop_M      n=3  median 0.0        range 0.0 - 0.0
+  pps512_arm           n=3  median 0.05       range 0.04 - 0.27
+  pps1500_tx_M         n=3  median 8.224      range 8.224 - 8.224
+  pps1500_rx_M         n=3  median 3.392      range 3.38 - 3.417
+  pps1500_rxdrop_M     n=3  median 0.0        range 0.0 - 0.0
+  pps1500_arm          n=3  median 0.04       range 0.04 - 0.28

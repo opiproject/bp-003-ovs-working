@@ -4,3 +4,8 @@
 *.docx
 .env
 .env.*
+
+# local-only handover and OS clutter
+new-chat-handover/
+CLAUDE.local.md*
+.DS_Store

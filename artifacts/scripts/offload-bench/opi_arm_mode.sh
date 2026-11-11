@@ -96,15 +96,16 @@ to_kernel() {   # $1 = true|false for hw-offload
     # editing the live config, restore the DB snapshot taken before entering doca mode.
     [[ -f $PRE_DOCA_DB ]] || { log "ERROR: no $PRE_DOCA_DB snapshot — restore a backup/<ts>/conf.db by hand"; exit 1; }
     log "leaving OVS-DOCA mode: restoring pre-doca DB snapshot"
-    systemctl stop "$SVC" || true
-    cat "$PRE_DOCA_DB" > "$DB"            # write through, never copy the symlink
+    systemctl stop ovs-vswitchd ovsdb-server "$SVC" || true
+    if pgrep -x 'ovsdb-server|ovs-vswitchd' >/dev/null; then log "ERROR: OVS still running, not touching the DB"; exit 1; fi
+    cp "$PRE_DOCA_DB" "$DB"
     # netdev datapath leaves persistent tap devices named after each bridge; they
     # block the kernel datapath from creating its internal port ("File exists")
     for br in $(ip -o link show type tun 2>/dev/null | awk -F': ' '{print $2}' | cut -d@ -f1); do
       if ovs-vsctl --no-wait br-exists "$br" 2>/dev/null; then log "removing stale tap $br"; ip link del "$br" || true; fi
     done
     systemctl reset-failed ovs-vswitchd ovsdb-server "$SVC" 2>/dev/null || true
-    systemctl start "$SVC"
+    systemctl start ovsdb-server ovs-vswitchd "$SVC"
     wait_ovs
   fi
   ovs-vsctl set Open_vSwitch . other_config:hw-offload="$1"
@@ -127,7 +128,8 @@ setup_hugepages() {
 to_doca() {
   if [[ "$(oc_get doca-init)" != "true" ]] && ! any_netdev_bridge; then
     ovs-vsctl --no-wait set Open_vSwitch . other_config:hw-offload=true
-    systemctl stop "$SVC"; cat "$DB" > "$PRE_DOCA_DB"; systemctl start "$SVC"; wait_ovs
+    systemctl stop ovs-vswitchd ovsdb-server "$SVC"; cp "$DB" "$PRE_DOCA_DB"
+    systemctl start ovsdb-server ovs-vswitchd "$SVC"; wait_ovs
     [[ -s $PRE_DOCA_DB && ! -L $PRE_DOCA_DB ]] || { log "ERROR: snapshot failed"; exit 1; }
     log "saved pre-doca DB snapshot to $PRE_DOCA_DB"
   fi

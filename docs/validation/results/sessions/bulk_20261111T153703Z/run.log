@@ -1,0 +1,40 @@
+[2026-11-11T15:37:03Z] round 1: switching Arm to sw
+[2026-11-11T15:38:17Z] sw done: 16.63 Gbit/s sent, 807698 retransmits
+[2026-11-11T15:38:17Z] round 1: switching Arm to tc
+[2026-11-11T15:39:30Z] tc done: 38.94 Gbit/s sent, 2013494 retransmits
+[2026-11-11T15:39:30Z] round 1: switching Arm to doca
+[2026-11-11T15:40:49Z] doca done: 46.72 Gbit/s sent, 2130844 retransmits
+[2026-11-11T15:40:49Z] round 2: switching Arm to doca
+[2026-11-11T15:42:17Z] doca done: 47.08 Gbit/s sent, 2188325 retransmits
+[2026-11-11T15:42:17Z] round 2: switching Arm to tc
+[2026-11-11T15:43:37Z] tc done: 28.88 Gbit/s sent, 1558938 retransmits
+[2026-11-11T15:43:37Z] round 2: switching Arm to sw
+[2026-11-11T15:44:51Z] sw done: 16.36 Gbit/s sent, 796768 retransmits
+[2026-11-11T15:44:51Z] round 3: switching Arm to sw
+[2026-11-11T15:46:04Z] sw done: 16.49 Gbit/s sent, 793827 retransmits
+[2026-11-11T15:46:04Z] round 3: switching Arm to tc
+[2026-11-11T15:47:18Z] tc done: 44.92 Gbit/s sent, 1891467 retransmits
+[2026-11-11T15:47:18Z] round 3: switching Arm to doca
+[2026-11-11T15:48:37Z] doca done: 46.32 Gbit/s sent, 2063519 retransmits
+[2026-11-11T15:48:37Z] round 4: switching Arm to doca
+[2026-11-11T15:50:05Z] doca done: 46.24 Gbit/s sent, 2065526 retransmits
+[2026-11-11T15:50:05Z] round 4: switching Arm to tc
+[2026-11-11T15:51:24Z] tc done: 45.96 Gbit/s sent, 1941125 retransmits
+[2026-11-11T15:51:24Z] round 4: switching Arm to sw
+[2026-11-11T15:52:38Z] sw done: 16.63 Gbit/s sent, 807709 retransmits
+[2026-11-11T15:52:38Z] round 5: switching Arm to sw
+[2026-11-11T15:53:52Z] sw done: 16.81 Gbit/s sent, 821918 retransmits
+[2026-11-11T15:53:52Z] round 5: switching Arm to tc
+[2026-11-11T16:14:55Z] tc done: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2026-11-11T16:14:55Z] round 5: switching Arm to doca
+[2026-11-11T16:15:13Z] doca: vm1 cannot reach 10.99.2.2
